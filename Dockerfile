@@ -7,7 +7,8 @@ RUN install2.r --error --skipinstalled \
     insect \
     RSQLite \
     DT \
-    waiter
+    waiter \
+    shinyWidgets
 
 # Rstudio interface preferences
 COPY rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
