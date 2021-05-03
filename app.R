@@ -34,29 +34,29 @@ ui <- fluidPage(
     fluidRow(column(12,
                 tabsetPanel(
                     #tabPanel("Instructions", br(), htmlOutput('Instructions', inline = FALSE)),
-                    tabPanel("Classifier", 
+                    tabPanel("Classifier",
                          br(),
-                         p("Welcome to Rappseq, a tool for identifying bacterial pathogens to MLST 
-                           (multilocus sequence type) level, 
+                         p("Welcome to Rappseq, a tool for identifying bacterial pathogens to MLST
+                           (multilocus sequence type) level,
                            based on Oxford Nanopore long read sequence data."),
-                         p("For optimal performance, only upload fastq files containing 1000 sequences or less. 
-                           Processing time will depend on the average sequence length, 
+                         p("For optimal performance, only upload fastq files containing 1000 sequences or less.
+                           Processing time will depend on the average sequence length,
                            but is generally 10-20s per 1000 sequences"),
-                         p("The result table lists the most likely MLST matches with the best match at the top. 
-                           If the number of kmer hits for the best match is low (i.e. less than 100), 
-                           or multiple strains have a similar number of kmer hits, 
-                           this can be interpreted as an inconclusive result. 
+                         p("The result table lists the most likely MLST matches with the best match at the top.
+                           If the number of kmer hits for the best match is low (i.e. less than 100),
+                           or multiple strains have a similar number of kmer hits,
+                           this can be interpreted as an inconclusive result.
                            This often arises when the query strain is not present in the reference database.
                            As a rule of thumb, the best match should have at least 1000 diagnostic kmer hits
                            and at least 10x that of the next best hit."),
-                         p("Rappseq is currently in development. Currently the features are restricted to Group B 
+                         p("Rappseq is currently in development. Currently the features are restricted to Group B
                            Streptococcus (S. agalactiae) multilocus sequence types ST23, ST260 and ST261
                            from the University of Quesensland culture collection.
                            More species, serotypes and MLSTs will be available shortly."),
                          #htmlOutput('Instructions', inline = T),
                          br(),
-                         # textInput("sequence2", label = "Paste long-read sequence for kmer classifier"), 
-                         # br(), 
+                         # textInput("sequence2", label = "Paste long-read sequence for kmer classifier"),
+                         # br(),
                          fileInput("file1", "Upload fastq file", multiple = FALSE),
                          actionButton("submit2", label = "Assign"),
                          br(),
@@ -65,7 +65,7 @@ ui <- fluidPage(
                     ),
                     tabPanel("Reference data",
                          br(),
-                         textInput(inputId = 'pass_code', label = "Passcode (optional)"), 
+                         textInput(inputId = 'pass_code', label = "Passcode (optional)"),
                          br(),
                          dataTableOutput('table3'),
                          br()
@@ -73,21 +73,21 @@ ui <- fluidPage(
                 )
     ))
 )
- 
-# Define server logic 
+
+# Define server logic
 server <- function(input, output) {
     w <- Waiter$new(id = "table2")
     options(shiny.maxRequestSize=100*1024^2)
     # cat(session$user)
     datasetInput <- reactive({
-        
+
         metadata <- read.csv("data/isolate_metadata.csv", stringsAsFactors = FALSE)
         refseqs <- dir("data/refseqs/GBS")
         seqIDs <- sub("_.+", "", refseqs)
         stopifnot(all(seqIDs %in% metadata$IsolateID))
         stopifnot(all(metadata$IsolateID %in% seqIDs))
         metadata <- metadata[match(seqIDs, metadata$IsolateID),]
-        
+
         metadata$Download <- paste0("<a href='refseqs/GBS/", refseqs, "' download>fasta</a>")
         rownames(metadata) <- NULL
         colnames(metadata) <- c("Sequence_ID","Lab_Name","Isolate_ID","Genus","Species","Host",
@@ -134,10 +134,10 @@ server <- function(input, output) {
                 out <- sort(table(outtab$taxID), decreasing = T)
                 sppnames <- metadata$MLST[match(names(out), metadata$MLST)]
                 outtab <- data.frame(taxID = names(out), hits = as.vector(out))
-                outtab <- DT::datatable(outtab, rownames = F, 
-                                        options = list(searching = FALSE, 
-                                                       filtering='none', 
-                                                       lengthChange = FALSE, 
+                outtab <- DT::datatable(outtab, rownames = F,
+                                        options = list(searching = FALSE,
+                                                       filtering='none',
+                                                       lengthChange = FALSE,
                                                        paging = FALSE,
                                                        info = FALSE),
                                         colnames = c("MLST", "Number of kmer hits"))
@@ -147,20 +147,20 @@ server <- function(input, output) {
         output$table2 <- renderDataTable(outtab)
     }
 )
-    
-    
+
+
     # output$table3 <- DT::renderDataTable({
     #     qmastrains <- datasetInput()
     #     qmastrains
-    # }) 
-    
+    # })
+
     output$table3 <- renderDataTable({
         metadata <- datasetInput()
-        metadata <- DT::datatable(metadata, escape = F, rownames = FALSE, 
+        metadata <- DT::datatable(metadata, escape = F, rownames = FALSE,
                                   colnames= c("Sequence ID","Lab name","Isolate ID","Genus","Species","Host",
                                                           "Origin","Year","Serotype","MLST","Download"))
         metadata
-    }) 
+    })
     output$Instructions <- renderUI(includeHTML("www/Instructions.html"))
 }
 
@@ -171,5 +171,5 @@ onStop(function() {
     RSQLite::dbDisconnect(conn)
 })
 
-# Run the application 
+# Run the application
 shinyApp(ui = ui, server = server)
