@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  r:
+    build: .
+    ports:
+      - "8805:8787"
+    volumes:
+      - .:/home/rstudio/rappseq
+    environment:
+      DISABLE_AUTH: "true"
