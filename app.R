@@ -8,7 +8,7 @@ library(waiter)
 ## Notes
 # When adding new genomes also update the isolate_metadata.csv file
 
-conn <- dbConnect(RSQLite::SQLite(), "www/classifiers/GBS/210209.db")
+conn <- dbConnect(RSQLite::SQLite(), "data/classifiers/GBS/210209.db")
 
 varcharize <- function(s, k = 20){
     s <- gsub("[^ACGT]", "", s)
@@ -82,7 +82,7 @@ server <- function(input, output) {
     datasetInput <- reactive({
         
         metadata <- read.csv("data/isolate_metadata.csv", stringsAsFactors = FALSE)
-        refseqs <- dir("www/refseqs/GBS")
+        refseqs <- dir("data/refseqs/GBS")
         seqIDs <- sub("_.+", "", refseqs)
         stopifnot(all(seqIDs %in% metadata$IsolateID))
         stopifnot(all(metadata$IsolateID %in% seqIDs))
