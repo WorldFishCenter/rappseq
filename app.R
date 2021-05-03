@@ -64,8 +64,8 @@ ui <- fluidPage(
                          dataTableOutput('table2')# %>% withSpinner(color="#0dc5c1")
                     ),
                     tabPanel("Reference data",
-                         br(),
-                         textInput(inputId = 'pass_code', label = "Passcode (optional)"),
+                         # br(),
+                         # textInput(inputId = 'pass_code', label = "Passcode (optional)"),
                          br(),
                          dataTableOutput('table3'),
                          br()
@@ -88,11 +88,11 @@ server <- function(input, output) {
         stopifnot(all(metadata$IsolateID %in% seqIDs))
         metadata <- metadata[match(seqIDs, metadata$IsolateID),]
 
-        metadata$Download <- paste0("<a href='refseqs/GBS/", refseqs, "' download>fasta</a>")
+        # metadata$Download <- paste0("<a href='refseqs/GBS/", refseqs, "' download>fasta</a>")
         rownames(metadata) <- NULL
         colnames(metadata) <- c("Sequence_ID","Lab_Name","Isolate_ID","Genus","Species","Host",
-                                "Origin","Year","Serotype","MLST","Download")
-        if(!input$pass_code == "ky7%yJIOIjY6*UMOOK$jU") metadata$Download <- "Enter passcode for access"
+                                "Origin","Year","Serotype","MLST")
+        # if(!input$pass_code == "ky7%yJIOIjY6*UMOOK$jU") metadata$Download <- "Enter passcode for access"
         return(metadata)
     })
 
@@ -158,7 +158,7 @@ server <- function(input, output) {
         metadata <- datasetInput()
         metadata <- DT::datatable(metadata, escape = F, rownames = FALSE,
                                   colnames= c("Sequence ID","Lab name","Isolate ID","Genus","Species","Host",
-                                                          "Origin","Year","Serotype","MLST","Download"))
+                                                          "Origin","Year","Serotype","MLST"))
         metadata
     })
     output$Instructions <- renderUI(includeHTML("www/Instructions.html"))
