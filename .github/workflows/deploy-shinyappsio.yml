@@ -38,4 +38,4 @@ jobs:
       - name: Push to shinyapps.io
         run: |
           Rscript -e "rsconnect::setAccountInfo(name='worldfish', token='${{secrets.SHINYAPPS_TOKEN}}', secret='${{secrets.SHINYAPPS_SECRET}}')"
-          Rscript -e "rsconnect::deployApp(appName = 'rappseq-2')"
+          Rscript -e "rsconnect::deployApp(appName = 'rappseq2', appTitle = 'rappseq2')"
