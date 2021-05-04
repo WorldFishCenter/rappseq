@@ -7,6 +7,9 @@ jobs:
   deploy-shinyapps-io:
     name: Deploy on shinyapps.io
     runs-on: macos-10.15
+    env:
+      SHINYAPPS_TOKEN: ${{secrets.SHINYAPPS_TOKEN}}
+      SHINYAPPS_SECRET: ${{secrets.SHINYAPPS_SECRET}}
     steps:
 
       - name: Checkout repository
@@ -37,5 +40,5 @@ jobs:
 
       - name: Push to shinyapps.io
         run: |
-          Rscript -e "rsconnect::setAccountInfo(name='worldfish', token='${{secrets.SHINYAPPS_TOKEN}}', secret='${{secrets.SHINYAPPS_SECRET}}')"
+          Rscript -e "rsconnect::setAccountInfo(name='worldfish', token=Sys.getenv('SHINYAPPS_TOKEN'), secret=Sys.getenv('SHINYAPPS_SECRET'))"
           Rscript -e "rsconnect::deployApp(appName = 'rappseq2', appTitle = 'rappseq2')"
