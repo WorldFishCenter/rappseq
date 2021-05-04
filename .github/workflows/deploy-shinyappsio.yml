@@ -6,7 +6,7 @@ on:
 jobs:
   deploy-shinyapps-io:
     name: Deploy on shinyapps.io
-    runs-on: ubuntu-20.04
+    runs-on: macOS-10.5
     steps:
 
       - name: Checkout repository
@@ -27,6 +27,8 @@ jobs:
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: '4.0.5'
 
       - name: Install rsconnect
         run: |
