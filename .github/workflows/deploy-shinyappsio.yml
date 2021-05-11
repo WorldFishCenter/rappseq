@@ -33,6 +33,11 @@ jobs:
         with:
           r-version: '4.0.5'
 
+      - name: Setup pandoc
+        uses: r-lib/actions/setup-pandoc@v1
+        with:
+            pandoc-version: '2.7.3'
+
       - name: Install R-package dependencies
         run: install.packages(c('shiny', 'rmarkdown', 'rsconnect', 'insect', 'RSQLite', 'DT', 'waiter', 'shinyWidgets'))
         shell: Rscript {0}
