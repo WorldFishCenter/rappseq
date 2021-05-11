@@ -8,7 +8,8 @@ RUN install2.r --error --skipinstalled \
     RSQLite \
     DT \
     waiter \
-    shinyWidgets
+    shinyWidgets \
+    rmarkdown
 
 # Rstudio interface preferences
 COPY rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
