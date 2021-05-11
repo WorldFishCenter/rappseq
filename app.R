@@ -26,8 +26,9 @@ varcharize <- function(s, k = 20){
 
 ui <- fluidPage(
     use_waiter(),
+    useShinyjs(),
     #theme = "bootstrap.css",
-    shinyWidgets::setBackgroundImage(src = "rect.png"),
+    # shinyWidgets::setBackgroundImage(src = "rect.png"),
     titlePanel(h1("Rappseq", style="opacity:0.8; text-decoration: underline; line-height:20px; "), windowTitle = "Rappseq"),
     titlePanel(h4("Rapid pathogen sequencing and identification", style="opacity:0.8; line-height:15px;")), #text-decoration: overline; line-height: 0;
     titlePanel(h4("", style="opacity:0; line-height:10px;")),
