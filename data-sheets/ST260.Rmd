@@ -60,4 +60,4 @@ output: html_document
 - Emergency harvest
 
 </br>
-<p><a class="btn btn-primary btn-lg" href=".." role="button">Return to the tool</a></p>
+<p><a class="btn btn-primary btn-lg" href="/" role="button">Return to the tool</a></p>
