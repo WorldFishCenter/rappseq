@@ -97,6 +97,8 @@ server <- function(input, output) {
         return(metadata)
     })
 
+    values <- reactiveValues()
+
     observeEvent(input$submit2, {
         w$show()
         metadata <- datasetInput()
@@ -135,21 +137,29 @@ server <- function(input, output) {
                 out <- sort(table(outtab$taxID), decreasing = T)
                 sppnames <- metadata$MLST[match(names(out), metadata$MLST)]
                 outtab <- data.frame(taxID = names(out), hits = as.vector(out))
-                outtab <- DT::datatable(outtab, rownames = F,
-                                        options = list(searching = FALSE,
-                                                       filtering='none',
-                                                       lengthChange = FALSE,
-                                                       paging = FALSE,
-                                                       info = FALSE),
-                                        colnames = c("MLST", "Number of kmer hits"))
+
                 #outtab <- data.frame(taxID = length(x), name = "") #######
             }
         #}
-        output$table2 <- renderDataTable(outtab)
+
+
+            values$results <- outtab
+
     }
+
+
 )
 
-
+    output$table2 <- renderDataTable({
+        outtab <- values$results
+        DT::datatable(outtab, rownames = F,
+                      options = list(searching = FALSE,
+                                     filtering='none',
+                                     lengthChange = FALSE,
+                                     paging = FALSE,
+                                     info = FALSE),
+                      colnames = c("MLST", "Number of kmer hits"))
+    })
     # output$table3 <- DT::renderDataTable({
     #     qmastrains <- datasetInput()
     #     qmastrains
