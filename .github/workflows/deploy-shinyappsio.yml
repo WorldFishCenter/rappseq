@@ -37,6 +37,9 @@ jobs:
         run: install.packages(c('shiny', 'rmarkdown', 'rsconnect', 'insect', 'RSQLite', 'DT', 'waiter', 'shinyWidgets'))
         shell: Rscript {0}
 
+      - name: Generate data sheets
+        run: Rscript compile-sheet.R
+
       - name: Set shinyapps.io account info
         run: Rscript -e "rsconnect::setAccountInfo(name='worldfish', token=Sys.getenv('SHINYAPPS_TOKEN'), secret=Sys.getenv('SHINYAPPS_SECRET'))"
 
