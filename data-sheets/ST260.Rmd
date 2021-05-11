@@ -1,0 +1,63 @@
+---
+title: "*Streptococcus agalactiae* - Ib - ST-260"
+output: html_document
+---
+
+## Causative agent
+
+- Pathogen type: bacteria
+- Genus: *Streptococcus*
+- Species: *agalactiae*
+- Pathogen environment: fresh, brackish, marine waters
+
+## General description
+
+- Streptococcus agalactiae (also known as group B streptococcus or GBS) is a gram-positive coccus (round bacterium) with a tendency to form chain
+
+## Host range
+
+- Susceptible species: fish (Nile tilapia: Oreochromis niloticus and other species)
+- Known affected life stage(s): fries, juveniles and adults
+
+## Risk factors
+
+- Temperature 
+- Salinity
+- Sourcing of infected seeds 
+
+## Geographical distribution
+
+- Countries: multiple
+- Clinical signs: exophthalmia, ascetic fluid, erratic swimming etc. 
+- Host tissues and infected organs: systemic
+
+## Social and economic significance
+
+- High 
+
+## Serotype
+
+- Ib
+
+## Sequence type
+
+- ST-261
+
+## Safety information/zoonotic importance
+
+- Infect fish only, no risk of transmission to human
+
+## Prevention/control measures
+
+- Stock with vaccinated specific pathogen free (SPF) seeds
+
+## Advice for action
+
+- Reinforce on-site biosecurity measures
+- Do not move fish between ponds and outside the site 
+- Manage feed/water quality 
+- Protocol/decision tree for safe antibiotic use (withholding period) 
+- Emergency harvest
+
+</br>
+<p><a class="btn btn-primary btn-lg" href=".." role="button">Return to the tool</a></p>

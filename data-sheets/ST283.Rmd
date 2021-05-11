@@ -1,0 +1,89 @@
+---
+title: "*Streptococcus agalactiae* - III - ST-283"
+output: html_document
+---
+
+## Causative agent
+
+- Pathogen type: bacteria
+- Genus: *Streptococcus*
+- Species: *agalactiae*
+- Pathogen environment: fresh, brackish, marine waters
+
+## General description
+
+- Streptococcus agalactiae (also known as group B streptococcus or GBS) is a gram-positive coccus (round bacterium) with a tendency to form chain
+
+## Host range
+
+- Susceptible species: 
+    - human 
+    - Fish: tilapia, seven freshwater fish species in Singapore markets
+    - Frog  
+- Known affected life stage(s): 
+    - Human: non-pregnant and younger adults
+    - Fish: fries, juveniles and adults
+
+## Risk factors
+
+- Human: 
+    - Immunocompromised individual 
+    - Transmission from fish to human acquired from eating raw farmed freshwater fish products
+- Fish:
+    - Transmission from human to fish via contaminated water 
+
+## Geographical distribution
+
+- Countries: 
+    - France (human)
+    - Hong Kong (human)
+    - Thailand (human and fish)
+    - Singapore (human and seven fish species in wet-markets)
+    - Lao PDR (human), 
+    - Vietnam (human and tilapia)
+    - Malaysia (Tilapia)
+    - China (frog)
+
+- Clinical signs: 
+    - Human: 
+        - septic arthritis
+        - meningitis
+    - Fish
+        - exophthalmia
+        - ascetic fluid
+        - erratic swimming etc. 
+- Host tissues and infected organs: systemic
+
+## Social and economic significance
+
+- High 
+
+## Serotype
+
+- III
+
+## Sequence type
+
+- ST-283
+
+## Safety information/zoonotic importance
+
+- Known to primarily infect human
+- Limited reports in fish but high risk for transmission from fish to human acquired from eating raw farmed freshwater fish products
+
+## Prevention/control measures
+
+- Reduce/prevent water contamination with sewage water 
+- If problem persists stock with vaccinated specific pathogen free (SPF) seeds
+
+## Advice for action
+
+- Reinforce on-site biosecurity measures
+- Do not move fish between ponds and outside the site 
+- Manage feed/water quality 
+- Protocol/decision tree for safe antibiotic use (withholding period) 
+- Emergency harvest
+- Do not consume raw farmed freshwater fish products
+
+</br>
+<p><a class="btn btn-primary btn-lg" href=".." role="button">Return to the tool</a></p>

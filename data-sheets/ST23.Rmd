@@ -1,0 +1,11 @@
+---
+title: "*Streptococcus agalactiae* - Ib - ST-23"
+output: html_document
+---
+
+</br>
+
+Sorry, we don't have developed a data-sheet for this pathogen. 
+
+</br>
+<p><a class="btn btn-primary btn-lg" href=".." role="button">Return to the tool</a></p>
