@@ -34,7 +34,7 @@ jobs:
           r-version: '4.0.5'
 
       - name: Install R-package dependencies
-        run: install.packages(c('shiny', 'rsconnect', 'insect', 'RSQLite', 'DT', 'waiter', 'shinyWidgets'))
+        run: install.packages(c('shiny', 'rmarkdown', 'rsconnect', 'insect', 'RSQLite', 'DT', 'waiter', 'shinyWidgets'))
         shell: Rscript {0}
 
       - name: Set shinyapps.io account info
