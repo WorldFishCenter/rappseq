@@ -42,3 +42,7 @@ docs
 ## data files
 *.db
 *.fasta
+
+## html files
+www/*.html
+data-sheets/*.html
