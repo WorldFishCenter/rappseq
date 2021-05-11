@@ -62,6 +62,7 @@ ui <- fluidPage(
                          actionButton("submit2", label = "Assign"),
                          br(),
                          br(),
+                         uiOutput("alert_result"),
                          dataTableOutput('table2')# %>% withSpinner(color="#0dc5c1")
                     ),
                     tabPanel("Reference data",
@@ -172,6 +173,34 @@ server <- function(input, output) {
                                                           "Origin","Year","Serotype","MLST"))
         metadata
     })
+
+    output$alert_result <- renderUI({
+        outtab <- values$results
+        if (length(outtab) > 0) {
+            top <- outtab$taxID[1]
+            hits <- outtab$hits[1:2]
+            if (hits[1] > 1000 & hits[1] > hits[2]*3){
+                tagList(
+                    div(class = "alert alert-success", role = "alert",
+                        "Great!",
+                        "It's likely that", a(href = paste0(top, ".html"), class = "alert-link", top),
+                        "is the dominant pathogen present in the sample.",
+                        "Click",
+                        a(href = paste0(top, ".html"), class = "alert-link", "here"),
+                        "to learn more")
+                )
+            } else {
+                tagList(
+                    div(class = "alert alert-danger", role = "alert", {
+                        "We were not able to find a match!"
+                    })
+                )
+            }
+
+        }
+
+    })
+
     output$Instructions <- renderUI(includeHTML("www/Instructions.html"))
 }
 
