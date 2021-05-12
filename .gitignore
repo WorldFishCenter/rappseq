@@ -46,3 +46,5 @@ docs
 ## html files
 www/*.html
 data-sheets/*.html
+
+site/public/
