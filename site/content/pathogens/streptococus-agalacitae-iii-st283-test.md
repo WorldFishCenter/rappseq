@@ -1,7 +1,7 @@
 ---
 title: Streptococus agalacitae III ST283
 date: 2021-05-12T00:06:37.776Z
-description: A gram-positive coccus with high impact in aquaculture.
+description: A gram-positive coccus with high impact in aquaculture su-merce
 causative_agent:
   pathogen_type: bacterium
   genus: Streptococcus
