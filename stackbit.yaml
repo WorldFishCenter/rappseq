@@ -1,9 +1,9 @@
 stackbitVersion: ~0.3.0
 cmsName: netlifycms
 ssgName: hugo
-publishDir: public
-dataDir: data
-pagesDir: content
+publishDir: site/public
+dataDir: site/data
+pagesDir: site/content
 assets:
   referenceType: static
   staticDir: static
