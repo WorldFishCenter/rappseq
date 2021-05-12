@@ -1,0 +1,121 @@
+backend:
+  name: github
+  repo: WorldFishCenter/rappseq
+  branch: main
+  site_domain: gallant-khorana-f279a4.netlify.com
+
+media_folder: "images/uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "pathogens" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Pathogen" # Used in the UI, ie.: "New Post"
+    folder: "content/pathogens" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    editor:
+      preview: true
+    fields: # The fields each document in this collection have
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        default: "This will be used to create the Pathogen's URL slug"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Summary Blurb"
+        name: "description"
+        widget: "text"
+        default: "A brief, human-readable sumary of the most important aspects of this pathogen. This will be shown in the results page"
+      - label: "Causative Agent"
+        name: "causative_agent"
+        widget: "object"
+        fields: 
+          - label: "Pathogen type"
+            name: "pathogen_type"
+            widget: "select"
+            options: ["virus", "bacterium", "fungus", "protozoon", "worm"]
+          - label: "Genus name"
+            name: "genus"
+            widget: "string"
+          - label: "Species name"
+            name: "species"
+            widget: "string"
+          - label: "Other names"
+            name: "other_names"
+            required: false
+            widget: "list"
+            field: 
+              label: Name
+              name: other_name, 
+              widget: string
+          - label: "Serotype name"
+            name: "serotype"
+            widget: "string"
+          - label: "Multi-locus type name"
+            name: "mlst"
+            widget: "string"
+      - label: Social importance
+        name: social_importance
+        widget: select
+        options: ["high", "medium", "low"]
+      - label: Economic importance
+        name: economic_importance
+        widget: "select"
+        options: ["high", "medium", "low"]
+      - label: "Host specific info."
+        name: "hosts"
+        widget: "list"
+        fields:
+          - label: "Host name"
+            name: host_name
+            widget: string
+          - label: "Host type"
+            name: host_type
+            widget: select
+            options: ["aquatic food", "human"]
+          - label: Clinical signs
+            name: clinical_signs
+            widget: list
+            field:
+              label: Sign
+              name: clinical_sign
+              widget: string
+          - label: Risk factors
+            name: risk_factors
+            widget: list
+            field: 
+              label: Factor
+              name: risk_factor
+              widget: string
+          - label: Countries
+            name: countries
+            widget: list
+            field:
+              label: Country
+              name: country
+              widget: string
+      - label: "Safety & zoonotic information"
+        name: "safety"
+        widget: "list"
+        field: 
+          label: "Item"
+          name: safety_item
+          widget: string
+      - label: "Prevention & control meassures"
+        name: "measures"
+        widget: "list"
+        field: 
+          label: "Measure"
+          name: measure
+          widget: string
+      - label: "Reccomendations"
+        name: "reccomendations"
+        widget: "list"
+        field: 
+          label: "Reccomendation"
+          name: reccomendation
+          widget: string   
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - {label: "Other notes", name: "body", widget: "markdown"}
