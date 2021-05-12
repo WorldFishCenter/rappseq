@@ -7,5 +7,5 @@ pagesDir: site/content
 assets:
   referenceType: static
   staticDir: static
-  uploadDir: assets
+  uploadDir: site/assets
   publicPath: /
