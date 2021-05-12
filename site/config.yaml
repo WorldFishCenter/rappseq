@@ -1,0 +1,16 @@
+baseURL: "http://example.org/"
+languageCode: "en-us"
+title: "Aquaculture Rapid Pathogen Identification"
+theme: "rappseq"
+params:
+  copyrightHolder: WorldFish
+
+menu: 
+  main:
+    - name: Home
+      weight: 1
+      url: "/"
+    - name: Pathogens
+      weight: 2
+      url: "/pathogens/"
+    - name: FAQ

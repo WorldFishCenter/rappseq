@@ -1,0 +1,2 @@
+{{ $cpholder := print .Site.Params.copyrightHolder | safeHTML }}
+<p class="footer text-center">Copyright (c) {{ now.Format "2006"}} {{ $cpholder}}</p>

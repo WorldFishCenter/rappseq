@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ partial "metadata.html" . }}
+
+<p>Raw print of all pathogen parameters:</p>
+
+{{ $.Params }}
+
+{{ end }}
