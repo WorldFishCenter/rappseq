@@ -1,4 +1,4 @@
-baseURL: "http://example.org/"
+baseURL: "https://worldfishcenter.github.io/rappseq/"
 languageCode: "en-us"
 title: "Aquaculture Rapid Pathogen Identification"
 theme: "rappseq"
