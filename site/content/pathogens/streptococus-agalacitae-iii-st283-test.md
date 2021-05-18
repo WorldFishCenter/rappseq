@@ -10,6 +10,9 @@ causative_agent:
     - Group B streptococcus
   serotype: III
   mlst: ST283
+safety_alerts:
+  risk_human: false
+  risk_fish: true
 social_importance: high
 economic_importance: high
 hosts:
@@ -42,15 +45,20 @@ hosts:
       - Singapore
       - Vietnam
 safety:
-  - Known to primarily infect human
+  - Known to primarily infect humans
   - Limited reports in fish but high risk for transmission from fish to human
     acquired from eating raw farmed freshwater fish products
-measures:
+measures_control:
   - Reduce/prevent water contamination with sewage water
-  - If problem persists stock with vaccinated specific pathogen free (SPF) seeds
-reccomendations:
-  - Reinforce on-site biosecurity measures
   - Do not move fish between ponds and outside the site
+  - Manage feed/water quality
+  - Protocol/decision tree for safe antibiotic use (withholding period)
+  - Emergency harvest
+  - If problem persists stock with vaccinated specific pathogen free (SPF) seeds
+measures_prevention:
+  -  Stocking with SPF seeds vaccinated against S. agalactiae serotype Ib, sequence type ST-261
+  - Reinforce on-site biosecurity measures
+reccomendations:
   - Do not consume raw farmed freshwater fish products
 ---
 None

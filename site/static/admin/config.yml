@@ -53,6 +53,16 @@ collections: # A list of collections the CMS should be able to edit
           - label: "Multi-locus type name"
             name: "mlst"
             widget: "string"
+      - label: Safety alerts
+        name: safety_alerts
+        widget: "object"
+        fields:
+          - label: Risk to humans
+            name: risk_human
+            widget: boolean 
+          - label: Risk to fish
+            name: risk_fish
+            widget: boolean 
       - label: Social importance
         name: social_importance
         widget: select
@@ -61,8 +71,43 @@ collections: # A list of collections the CMS should be able to edit
         name: economic_importance
         widget: "select"
         options: ["high", "medium", "low"]
+      - label: "Prevention meassures"
+        name: "measures_prevention"
+        widget: "list"
+        field: 
+          label: "Measure"
+          name: measure_prevention
+          widget: string
+      - label: "Control meassures"
+        name: "measures_control"
+        widget: "list"
+        field: 
+          label: "Measure"
+          name: measure_control
+          widget: string
+      - label: "Other eccomendations"
+        name: "reccomendations"
+        required: false
+        widget: "list"
+        field: 
+          label: "Reccomendation"
+          name: reccomendation
+          widget: string   
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Safety & zoonotic information"
+        name: "safety"
+        required: false
+        widget: "list"
+        field: 
+          label: "Item"
+          name: safety_item
+          widget: string
       - label: "Host specific info."
         name: "hosts"
+        required: false
         widget: "list"
         fields:
           - label: "Host name"
@@ -74,6 +119,7 @@ collections: # A list of collections the CMS should be able to edit
             options: ["aquatic food", "human"]
           - label: Clinical signs
             name: clinical_signs
+            required: false
             widget: list
             field:
               label: Sign
@@ -81,6 +127,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: string
           - label: Risk factors
             name: risk_factors
+            required: false
             widget: list
             field: 
               label: Factor
@@ -88,34 +135,10 @@ collections: # A list of collections the CMS should be able to edit
               widget: string
           - label: Countries
             name: countries
+            required: false
             widget: list
             field:
               label: Country
               name: country
               widget: string
-      - label: "Safety & zoonotic information"
-        name: "safety"
-        widget: "list"
-        field: 
-          label: "Item"
-          name: safety_item
-          widget: string
-      - label: "Prevention & control meassures"
-        name: "measures"
-        widget: "list"
-        field: 
-          label: "Measure"
-          name: measure
-          widget: string
-      - label: "Reccomendations"
-        name: "reccomendations"
-        widget: "list"
-        field: 
-          label: "Reccomendation"
-          name: reccomendation
-          widget: string   
-      - label: "Image"
-        name: "image"
-        widget: "image"
-        required: false
       - {label: "Other notes", name: "body", widget: "markdown"}
