@@ -78,6 +78,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "measures_prevention"
         widget: "list"
         collapsed: false
+        minimize_collapsed: false
         field: 
           label: "Measure"
           name: measure_prevention
@@ -86,6 +87,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "measures_control"
         widget: "list"
         collapsed: false
+        minimize_collapsed: false
         field: 
           label: "Measure"
           name: measure_control
@@ -93,8 +95,9 @@ collections: # A list of collections the CMS should be able to edit
       - label: "Other eccomendations"
         name: "reccomendations"
         required: false
-        widget: "list"
+        minimize_collapsed: false
         collapsed: false
+        widget: "list"
         field: 
           label: "Reccomendation"
           name: reccomendation
@@ -116,6 +119,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "hosts"
         required: false
         collapsed: false
+        minimize_collapsed: false
         widget: "list"
         fields:
           - label: "Host name"
