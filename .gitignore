@@ -42,9 +42,9 @@ docs
 ## data files
 *.db
 *.fasta
+*.fastq
 
 ## html files
 www/*.html
 data-sheets/*.html
-
 site/public/
