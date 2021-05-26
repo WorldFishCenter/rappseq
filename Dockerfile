@@ -9,7 +9,8 @@ RUN install2.r --error --skipinstalled \
     DT \
     waiter \
     shinyWidgets \
-    rmarkdown
+    rmarkdown \
+    plumber
 
 # Rstudio interface preferences
 COPY rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
