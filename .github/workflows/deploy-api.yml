@@ -33,17 +33,6 @@ jobs:
     - name: Authorize Docker push
       run: gcloud auth configure-docker
 
-    # - name: Authorize with a different approach
-    #   run: |-
-    #     echo ${{ secrets.GCP_SA_KEY }} > keyfile.json
-    #     cat keyfile.json | docker login -u _json_key --password-stdin https://${{ env.CONTAINER_REGISTRY }}
-
-    - name: Test registry
-      run: |-
-        docker pull busybox
-        docker tag busybox ${{ env.CONTAINER_REGISTRY }}/${{ env.PROJECT_ID }}/busybox
-        docker push ${{ env.CONTAINER_REGISTRY }}/${{ env.PROJECT_ID }}/busybox
-
     - name: Build and push API container
       run: |-
         docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} api/
