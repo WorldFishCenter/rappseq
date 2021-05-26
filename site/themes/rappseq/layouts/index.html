@@ -46,7 +46,7 @@
         data.append("fastq", fileField.files[0]);
 
         // (B) FETCH
-        fetch("http://localhost:9961/identify", {
+        fetch("https://rappseq-api-zrvf6kau3q-de.a.run.app/identify", {
                 method: 'post',
                 body: data
             })
