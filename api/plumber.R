@@ -9,13 +9,13 @@ cors <- function(res) {
 }
 
 #* Identify pathogens in a fastq file
-#* @param fastq:[file]
 #* @post /identify
 #* @parser multi
+#* @param fastq:[file]
 #* @parser octet
 function(req, fastq){
 
-  request_values <- mime::parse_multipart(req)
+  request_values <- suppressWarnings(mime::parse_multipart(req))
   x <- read_fastq(request_values$fastq$datapath, bin = F)
   ints <- unlist(lapply(x, varcharize, k = 20), use.names = F)
 
