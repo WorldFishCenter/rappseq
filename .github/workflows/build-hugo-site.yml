@@ -15,22 +15,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Check mmodified files
-        id: check_files
-        run: |-
-          git diff --name-only HEAD^ HEAD
-          while IFS= read -r file
-          do
-            echo $file
-            if [[ $file != site/* ]]; then
-              echo "This modified file is not under the 'site' folder."
-              echo "::set-output name=run_job::false"
-              break
-            else
-              echo "::set-output name=run_job::true"
-            fi
-          done < files.txt
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
