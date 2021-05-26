@@ -1,5 +1,72 @@
 {{ define "main" }}
 <div id="home-jumbotron">
-  <h1 class="display-1 text-center fw-bold">{{ .Site.Title }}</h1>
+    <h1 class="display-1 text-center fw-bold">{{ .Site.Title }}</h1>
 </div>
+<div class="text-center m-5">
+    <form onsubmit="return fetchpost()">
+        <!-- <input class="btn btn-secondary" type="file" id="file" name="myFile"> -->
+        <label for="formFile" class="form-label">Upload a FASTQ file</label>
+
+        <div class="input-group mb-3">
+            <input class="form-control" type="file" id="formFile">
+            <button class="btn btn-primary" type="submit" id="submit-button">
+              <span id="submit-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+              <span class="sr-only">Identify pathogen</span>
+              </button>
+        </div>
+
+    </form>
+
+    <div class="m-5">
+        <samp class="results">
+        <p>Results will be shown here...</p>
+    </samp>
+
+    </div>
+
+
+</div>
+
+<script>
+    var results = document.querySelector('.results');
+    let spinner = document.querySelector('#submit-spinner')
+    let button = document.querySelector('#submit-button')
+
+    function fetchpost() {
+
+        // Activate spinner
+
+        spinner.style.display = "inline-block"
+        button.disabled = true
+        button.lastElementChild.innerText = "Processing data..."
+
+        // (A) GET FORM DATA
+        let data = new FormData();
+        let fileField = document.querySelector('input[type="file"]');
+        data.append("fastq", fileField.files[0]);
+
+        // (B) FETCH
+        fetch("http://localhost:9961/identify", {
+                method: 'post',
+                body: data
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(text) {
+                console.log(text);
+                spinner.style.display = "none"
+                button.lastElementChild.innerText = "Identify pathogen"
+                button.disabled = false
+                results.innerHTML = JSON.stringify(text);
+            })
+            .catch(function(error) {
+                console.log(error)
+            });
+
+        // (C) PREVENT HTML FORM SUBMIT
+        return false;
+    }
+</script>
+
 {{ end }}
