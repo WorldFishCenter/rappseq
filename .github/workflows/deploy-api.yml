@@ -31,7 +31,7 @@ jobs:
       run: gcloud auth configure-docker
 
     - name: Authorize with a different approach
-      run: docker login -u _json_key -p "$(cat ${{ secrets.GCP_SA_KEY })" https://${{ env.CONTAINER_REGISTRY }}
+      run: docker login -u _json_key -p "$(cat ${{ secrets.GCP_SA_KEY }})" https://${{ env.CONTAINER_REGISTRY }}
 
     - name: Test registry
       run: |-
