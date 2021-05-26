@@ -10,9 +10,11 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   SERVICE: rappseq-api
   REGION: asia-east1
+  CONTAINER_REGISTRY: asia.gcr.io
 
 jobs:
   deploy:
+    name: Deploy identification API
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -28,7 +30,16 @@ jobs:
     - name: Authorize Docker push
       run: gcloud auth configure-docker
 
-    - name: Build and Push Container
+    - name: Authorize with a different approach
+      run: docker login -u _json_key -p "$(cat ${{ secrets.GCP_SA_KEY })" https://${{ env.CONTAINER_REGISTRY }}
+
+    - name: Test registry
+      run: |-
+        docker pull busybox
+        docker tag busybox ${{ env.CONTAINER_REGISTRY }}/${{ env.PROJECT_ID }}/busybox
+        docker push ${{ env.CONTAINER_REGISTRY }}/${{ env.PROJECT_ID }}/busybox
+
+    - name: Build and push API container
       run: |-
         docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} api/
         docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
