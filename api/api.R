@@ -4,6 +4,8 @@ library(plumber)
 
 source("funs.R")
 
+cat(list.files('.', recursive = T))
+
 mlst_db <- DBI::dbConnect(RSQLite::SQLite(), "data/classifiers/GBS/210524.db")
 sero_db <- DBI::dbConnect(RSQLite::SQLite(), "data/classifiers/GBS/210524_sero.db")
 
