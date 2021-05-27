@@ -21,9 +21,6 @@ function(req, fastq){
   matches_mlst <- find_matches(ints, mlst_db, hash)
   matches_sero <- find_matches(ints, sero_db, hash)
 
-
-  message(print(elapsed))
-
   list(
     data_filename = req$body$fastq$filename,
     data_content_type = req$body$fastq$content_type,
