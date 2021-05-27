@@ -3,7 +3,7 @@
 find_matches <- function(ints, this_db, hash){
 
   ints_df <- data.frame(kmer = unique(ints), stringsAsFactors = FALSE)
-  temp_table_name <- paste0("_", hash)
+  temp_table_name <- paste0("_", hash, "_", digest::digest(runif(1), algo = "md5"))
   DBI::dbCreateTable(conn = this_db, name = temp_table_name,
                      temporary = TRUE, fields = ints_df)
   DBI::dbAppendTable(conn = this_db, name = temp_table_name, value = ints_df)
