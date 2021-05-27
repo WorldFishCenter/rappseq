@@ -11,12 +11,14 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
   libxml2-dev
 
 RUN install2.r --error --skipinstalled \
-    plumber
+    plumber \
+    DBI \
+    RSQLite
 
 COPY . /home
 WORKDIR /home
 
-ENTRYPOINT ["R", "-e", "--quiet", "pr <- plumber::plumb('plumber.R'); pr$run(host='0.0.0.0', port=as.numeric(Sys.getenv('PORT')))"]
+ENTRYPOINT ["R", "-e", "--quiet", "source('api.R')"]
 
 # set default startup command to run the app's "plumber.R" file
 CMD ["plumber.R"]
