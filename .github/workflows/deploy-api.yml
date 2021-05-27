@@ -29,6 +29,11 @@ jobs:
         project_id: ${{ env.PROJECT_ID }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true  # Set to true to authenticate the Cloud Run action
+    
+    - name: Retrieve kmer classifier databases
+      run: |-
+        gsutil cp -r gs://rappseq-data-1/classifiers/GBS/210524.db api/data/classifiers/GBS
+        gsutil cp -r gs://rappseq-data-1/classifiers/GBS/210524_sero.db api/data/classifiers/GBS
 
     - name: Authorize Docker push
       run: gcloud auth configure-docker
