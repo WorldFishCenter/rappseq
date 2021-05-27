@@ -18,7 +18,7 @@ RUN install2.r --error --skipinstalled \
 COPY . /home
 WORKDIR /home
 
-ENTRYPOINT ["R", "-e", "--quiet", "source('api.R')"]
+ENTRYPOINT ["R", "--quiet", "-e", "source('api.R')"]
 
 # set default startup command to run the app's "plumber.R" file
-CMD ["plumber.R"]
+CMD ["api.R"]
