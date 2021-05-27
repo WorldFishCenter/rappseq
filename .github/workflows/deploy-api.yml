@@ -32,8 +32,8 @@ jobs:
     
     - name: Retrieve kmer classifier databases
       run: |-
-        gsutil cp -r gs://rappseq-data-1/classifiers/GBS/210524.db api/data/classifiers/GBS
-        gsutil cp -r gs://rappseq-data-1/classifiers/GBS/210524_sero.db api/data/classifiers/GBS
+        gsutil cp -r gs://rappseq-data-1/classifiers/GBS/210524.db api/data/classifiers/GBS/210524.db
+        gsutil cp -r gs://rappseq-data-1/classifiers/GBS/210524_sero.db api/data/classifiers/GBS/210524_sero.db
 
     - name: Authorize Docker push
       run: gcloud auth configure-docker
