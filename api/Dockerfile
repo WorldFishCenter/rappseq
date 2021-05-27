@@ -11,9 +11,10 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
   libxml2-dev
 
 RUN install2.r --error --skipinstalled \
-    plumber \
     DBI \
-    RSQLite
+    digest \
+    plumber \
+    RSQLite 
 
 COPY . /home
 WORKDIR /home
