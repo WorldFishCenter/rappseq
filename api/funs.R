@@ -17,6 +17,7 @@ find_matches <- function(ints, this_db, hash){
   sort(table(out$taxID), decreasing = T)
 }
 
+#' @author Shaun Wilkinson
 read_fastq <- function(file, bin = TRUE){
   x <- scan(file = file, what = "", sep = "\n", quiet = TRUE)
   if (!grepl("^@", x[1]))
@@ -40,6 +41,7 @@ read_fastq <- function(file, bin = TRUE){
   }
 }
 
+#' @author Shaun Wilkinson
 char2dna <- function(z, simplify = FALSE) {
   dbytes <- as.raw(c(136, 24, 72, 40, 96, 144, 192, 48, 80,
                      160, 112, 224, 176, 208, 240, 240, 4, 2))
@@ -65,6 +67,7 @@ char2dna <- function(z, simplify = FALSE) {
   return(res)
 }
 
+#' @author Shaun Wilkinson
 varcharize <- function(s, k = 20){
   s <- gsub("[^ACGT]", "", s)
   if (nchar(s) < 20) return(integer(0))
@@ -79,6 +82,7 @@ varcharize <- function(s, k = 20){
   return(out)
 }
 
+#' @author Shaun Wilkinson
 rc <- function(z){
   rc1 <- function(zz) {
     s <- strsplit(zz, split = "")[[1]]
