@@ -8,7 +8,8 @@ cat(list.files('.', recursive = T))
 
 db_files <- list(
   sa_mlst = "data/classifiers/GBS/210524.db",
-  sa_sero = "data/classifiers/GBS/210524_sero.db")
+  sa_sero = "data/classifiers/GBS/210524_sero.db",
+  yr_sero = "data/classifiers/GBS/210607.db")
 
 db_conn <- lapply(db_files, function(x) DBI::dbConnect(RSQLite::SQLite(), x))
 
@@ -24,3 +25,4 @@ pr$registerHooks(
 )
 
 pr$run(host='0.0.0.0', port=as.numeric(Sys.getenv('PORT')))
+# pr$run()
