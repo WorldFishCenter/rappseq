@@ -6,8 +6,11 @@ source("funs.R")
 
 cat(list.files('.', recursive = T))
 
-mlst_db <- DBI::dbConnect(RSQLite::SQLite(), "data/classifiers/GBS/210524.db")
-sero_db <- DBI::dbConnect(RSQLite::SQLite(), "data/classifiers/GBS/210524_sero.db")
+db_files <- list(
+  sa_mlst = "data/classifiers/GBS/210524.db",
+  sa_sero = "data/classifiers/GBS/210524_sero.db")
+
+db_conn <- lapply(db_files, function(x) DBI::dbConnect(RSQLite::SQLite(), x))
 
 pr <- plumber::plumb('plumber.R');
 
@@ -15,8 +18,7 @@ pr <- plumber::plumb('plumber.R');
 pr$registerHooks(
   list(
     "exit" = function() {
-      DBI::dbDisconnect(mlst_db)
-      DBI::dbDisconnect(sero_db)
+      lapply(db_conn, DBI::dbDisconnect)
     }
   )
 )
