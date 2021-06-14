@@ -23,6 +23,6 @@ function(req, fastq){
   list(
     data_filename = req$body$fastq$filename,
     data_content_type = req$body$fastq$content_type,
-    matches = as.list(matches),
+    matches = as.list(matches)
   )
 }
