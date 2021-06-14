@@ -18,11 +18,12 @@ function(req, fastq){
   x <- read_fastq(request_values$fastq$datapath, bin = F)
   ints <- unlist(lapply(x, varcharize, k = 20), use.names = F)
 
-  matches <- lapply(db_conn, function(x) find_matches(ints, x, hash))
+  matches_tbl <- lapply(db_conn, function(x) find_matches(ints, x, hash))
+  matches <- lapply(matches_tbl, as.list)
 
   list(
     data_filename = req$body$fastq$filename,
     data_content_type = req$body$fastq$content_type,
-    matches = as.list(matches)
+    matches = matches
   )
 }
