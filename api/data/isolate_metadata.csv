@@ -1,0 +1,11 @@
+SeqID,LabName,IsolateID,Genus,Species,Host,Origin,Year,Serotype,MLST
+22,UQ,QMA0522,Streptococcus,agalactiae,Dasiatis fluvorium,,2018,Ib,ST261
+23,UQ,QMA0519,Streptococcus,agalactiae,Bluespotted maskray,,2018,Ib,ST261
+24,UQ,QMA0347,Streptococcus,agalactiae,stingray,,,Ib,ST261
+25,UQ,QMA0368,Streptococcus,agalactiae,grouper,,,Ib,ST261
+26,UQ,QMA0267,Streptococcus,agalactiae,Grouper,,,Ib,ST261
+27,UQ,QMA0488,Streptococcus,agalactiae,tilapia,Honduras,,Ib,ST260
+28,UQ,QMA0496,Streptococcus,agalactiae,tilapia,Honduras,,Ib,ST260
+31,UQ,QMA0370,Streptococcus,agalactiae,COH1,,,III,ST17
+33,UQ,QMA0336,Streptococcus,agalactiae,crocodile ,,,Ia,ST23
+34,UQ,QMA0355,Streptococcus,agalactiae,Human,,,Ia,ST23
