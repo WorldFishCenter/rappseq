@@ -1,0 +1,23 @@
+// Bootstrap setup
+@import '../front-v3.3/node_modules/bootstrap/scss/functions';
+
+// Front setup
+@import '../front-v3.3/src/assets/scss/themes/default';
+
+@import 'user-variables';
+
+@import '../front-v3.3/src/assets/scss/front/variables';
+
+// Bootstrap core
+@import '../front-v3.3/node_modules/bootstrap/scss/bootstrap';
+
+/*----------------------------------------------------------------------
+  * Front - Responsive Website Template version v3.3.0
+  * Copyright 2018 Htmlstream
+  * Licensed under Bootstrap Themes (https://themes.getbootstrap.com/licenses/)
+------------------------------------------------------------------------*/
+
+@import '../front-v3.3/src/assets/scss/front/front';
+
+// Custom core
+@import 'user';

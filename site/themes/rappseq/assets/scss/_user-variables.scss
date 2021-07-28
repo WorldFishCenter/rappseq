@@ -1,0 +1,25 @@
+// user-variables.scss
+// Use this to overwrite Bootstrap and Front variables
+//
+$wfblue: #1a4985;
+$wfgreen: #58AB47;
+
+$primary: $wfblue;
+$secondary: $wfgreen;
+$font-family-base: "Poppins", Helvetica, Arial, sans-serif !default;
+
+$theme-colors: (
+  "primary": $wfblue,
+  "secondary": $wfgreen,
+  "dark": $wfblue
+  );
+
+// Example of a variable override to change Front's primary color and font size
+// Remove the "//" to comment it in and see it in action!
+// $primary: $red;
+// $font-size-base: .875rem;
+
+
+
+// The color of the SVG loader should be modified manually.
+// See assets/svg/components/circle-preloader.svg

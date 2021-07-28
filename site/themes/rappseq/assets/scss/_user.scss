@@ -1,0 +1,15 @@
+/*------------------------------------
+  File for your custom SCSS style
+------------------------------------*/
+.gradient-x-overlay-lg-dark::before {
+  background-image: linear-gradient(to bottom, rgba(26, 73, 133, 1) 0%, rgba(26, 73, 133, 0.9) 50%, rgba(26, 73, 133, 0.7) 100%);
+  background-repeat: repeat-x;
+}
+
+h1, h2, h3, h4 {
+  color: $primary;
+}
+
+.h1, .h2, .h3, .h4 {
+  color: $primary;
+}
