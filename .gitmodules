@@ -1,0 +1,3 @@
+[submodule "site/themes/rappseq/assets/front-v3.3"]
+	path = site/themes/rappseq/assets/front-v3.3
+	url = git@github.com:WorldFishCenter/front.git
