@@ -34,7 +34,7 @@ jobs:
       - run: ls site/themes/rappseq/assets/front-v3.3/
       - name: Install node dependencies
         run: npm install site/themes/rappseq/assets/front-v3.3/
-      
+      - run: ls site/themes/rappseq/assets/front-v3.3/node_modules
       - name: Build site
         run: "cd site && hugo --minify"
       
