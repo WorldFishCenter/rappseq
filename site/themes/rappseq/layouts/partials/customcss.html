@@ -1,0 +1,4 @@
+{{ range .Params.assets_css }}
+  {{ $css := resources.Get . }}
+  <link rel='stylesheet' href='{{ $css.RelPermalink }}'>
+{{ end }}

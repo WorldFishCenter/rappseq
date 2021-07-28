@@ -1,0 +1,4 @@
+{{ range .Params.assets_js }}
+  {{ $js := resources.Get . }}
+  <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}
