@@ -1,7 +1,5 @@
 ---
 title: AquaPath
-assets_css:
-  - front-v3.3/node_modules/@fortawesome/fontawesome-free/css/all.css
 hero: 
   title: AquaPath.
   lead_text: Rapid and accurate diagnosis for the control and prevention of diseases in aquatic animals
