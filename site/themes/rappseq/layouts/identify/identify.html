@@ -1,0 +1,357 @@
+{{ define "main"}}
+
+{{ partial "commingsoon" . }}
+
+{{/*
+<!-- Description Section -->
+<div class="container space-2">
+    <div class="w-lg-75 mx-lg-auto">
+      
+  
+      <form class="js-validate">
+      
+        <div class="border-bottom mb-4">
+          <h3>Sequences</h3>
+        </div>
+        <!-- Form Group -->
+        <div class="form-group">
+          <label class="input-label">Upload the FASTQ files containing the DNA sequences  <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top" title="Maximum file size 10 MB."></i></label>
+  
+          <div id="resumeAttach" class="js-dropzone dz-dropzone dz-dropzone-boxed">
+            <div class="dz-message p-2">
+              <span class="d-block mb-1">Browse your files</span>
+              <small class="d-block text-muted">or drag' n' drop here</small>
+            </div>
+          </div>
+        </div>
+        <!-- End Form Group -->
+
+        <div class="border-bottom mb-4">
+          <h3>Farm information</h3>
+        </div>
+
+        <div class="form-group">
+        <!-- Radio Checkbox Group -->
+    <div class="row mx-n2">
+      <div class="col-6 col-md-3 px-2 mb-3 mb-md-0">
+        <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon text-center w-100 h-100">
+          <input type="radio" id="typeOfListingRadio1" name="typeOfListingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
+          <label class="checkbox-outline-label checkbox-icon-label w-100 rounded py-3 px-1 mb-0" for="typeOfListingRadio1">
+            
+            <span class="d-block">Carp</span>
+          </label>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 px-2 mb-3 mb-md-0">
+        <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon text-center w-100 h-100">
+          <input type="radio" id="typeOfListingRadio2" name="typeOfListingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input" checked>
+          <label class="checkbox-outline-label checkbox-icon-label w-100 rounded py-3 px-1 mb-0" for="typeOfListingRadio2">
+            
+            <span class="d-block">Tilapia</span>
+          </label>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 px-2">
+        <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon text-center w-100 h-100">
+          <input type="radio" id="typeOfListingRadio3" name="typeOfListingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
+          <label class="checkbox-outline-label checkbox-icon-label w-100 rounded py-3 px-1 mb-0" for="typeOfListingRadio3">
+            <img class="img-fluid w-50 mb-3" src="../assets/svg/illustrations/multi-family-house.svg" alt="SVG">
+            <span class="d-block">Multi-family</span>
+          </label>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 px-2">
+        <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon text-center w-100 h-100">
+          <input type="radio" id="typeOfListingRadio4" name="typeOfListingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
+          <label class="checkbox-outline-label checkbox-icon-label w-100 rounded py-3 px-1 mb-0" for="typeOfListingRadio4">
+            <img class="w-50 mb-3" src="../assets/svg/illustrations/farm-land.svg" alt="SVG">
+            <span class="d-block">Farms/land</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- End Radio Checkbox Group --></div>
+  
+    <div class="btn-group btn-group-toggle btn-group-segment" data-toggle="buttons">
+      <label class="btn btm-primary">
+        <input type="radio" name="experienceInSimilaryAreaOptions" id="experienceInSimilaryAreaOption1"> <i class="fas fa-check mr-1"></i> Carp
+      </label>
+      <label class="btn">
+        <input type="radio" name="experienceInSimilaryAreaOptions" id="experienceInSimilaryAreaOption2"> <i class="fas fa-times mr-1"></i> Tilapia
+      </label>
+    </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <!-- Form Group -->
+            <div class="form-group">
+              <label for="firstName" class="input-label">Common name</label>
+              <input type="text" class="form-control" name="commonName" id="commonName" placeholder="Nataly" aria-label="Nataly">
+            </div>
+            <!-- End Form Group -->
+          </div>
+  
+          <div class="col-sm-6">
+            <!-- Form Group -->
+            <div class="form-group">
+              <label for="lastName" class="input-label">Scientific name</label>
+              <input type="text" class="form-control" name="scienfiticName" id="scienfiticName" placeholder="Gaga" aria-label="Gaga">
+            </div>
+            <!-- End Form Group -->
+          </div>
+        </div>
+        <!-- End Row -->
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label for="email" class="input-label">Email</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="nayagaga@pixeel.com" aria-label="alex@pixeel.com">
+        </div>
+        <!-- End Form Group -->
+  
+        <!-- Form Group -->
+        <div class="js-add-field form-group"
+             data-hs-add-field-options='{
+                "template": "#addPhoneFieldTemplate",
+                "container": "#addPhoneFieldContainer",
+                "defaultCreated": 0
+              }'>
+          <label for="phoneLabel" class="input-label">Phone <span class="input-label-secondary">(Optional)</span></label>
+  
+          <div class="input-group align-items-center">
+            <input type="text" class="js-masked-input form-control" name="phone" id="phoneLabel" placeholder="+x(xxx)xxx-xx-xx" aria-label="+x(xxx)xxx-xx-xx"
+                   data-hs-mask-options='{
+                     "template": "+0(000)000-00-00"
+                   }'>
+  
+            <div class="input-group-append">
+              <!-- Select -->
+              <select class="js-custom-select custom-select dropdown-toggle" name="phoneSelect"
+                    data-hs-select2-options='{
+                      "minimumResultsForSearch": "Infinity",
+                      "customClass": "custom-select",
+                      "dropdownAutoWidth": true,
+                      "width": true
+                    }'>
+                <option value="Mobile" selected>Mobile</option>
+                <option value="Home">Home</option>
+                <option value="Work">Work</option>
+                <option value="Fax">Fax</option>
+                <option value="Direct">Direct</option>
+              </select>
+              <!-- End Select -->
+            </div>
+          </div>
+  
+          <!-- Container For Input Field -->
+          <div id="addPhoneFieldContainer"></div>
+  
+          <a href="javascript:;" class="js-create-field form-link btn btn-xs btn-no-focus btn-ghost-primary">
+            <i class="fas fa-plus mr-1"></i>
+            Add phone
+          </a>
+        </div>
+        <!-- End Form Group -->
+  
+        <!-- Add Phone Input Field -->
+        <div id="addPhoneFieldTemplate" style="display: none;">
+          <div class="input-group input-group-add-field">
+            <input type="text" class="js-masked-input form-control" data-name="additionlPhone" placeholder="+x(xxx)xxx-xx-xx" aria-label="+x(xxx)xxx-xx-xx"
+                   data-hs-mask-options='{
+                     "template": "+0(000)000-00-00"
+                   }'>
+  
+            <div class="input-group-append">
+              <!-- Select -->
+              <select class="js-custom-select-dynamic btn btn-white dropdown-toggle"
+                    data-name="additionlPhoneSelect"
+                    data-hs-select2-options='{
+                      "minimumResultsForSearch": "Infinity",
+                      "customClass": "custom-select",
+                      "dropdownAutoWidth": true,
+                      "width": true
+                    }'>
+                <option value="Mobile" selected>Mobile</option>
+                <option value="Home">Home</option>
+                <option value="Work">Work</option>
+                <option value="Fax">Fax</option>
+                <option value="Direct">Direct</option>
+              </select>
+              <!-- End Select -->
+            </div>
+  
+            <a class="js-delete-field input-group-add-field-delete" href="javascript:;">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <!-- End Add Phone Input Field -->
+  
+        <div class="border-bottom mt-10 mb-4">
+          <h3>Profile</h3>
+        </div>
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label for="summary" class="input-label">Summary</label>
+  
+          <textarea class="form-control" rows="6" name="summary" id="summary" placeholder="In a few words, tell us about yourself..." aria-label="In a few words, tell us about yourself..." required></textarea>
+        </div>
+        <!-- End Form Group -->
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label class="input-label">Resume/CV and Cover Letter <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top" title="Maximum file size 10 MB."></i></label>
+  
+          <div id="resumeAttach" class="js-dropzone dz-dropzone dz-dropzone-boxed">
+            <div class="dz-message p-2">
+              <span class="d-block mb-1">Browse your files</span>
+              <small class="d-block text-muted">or drag' n' drop here</small>
+            </div>
+          </div>
+        </div>
+        <!-- End Form Group -->
+
+        
+  
+        <div class="border-bottom mt-10 mb-4">
+          <h3>Details</h3>
+        </div>
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label class="input-label">Do you have the right to work in the UK?</label>
+  
+          <!-- Button Group -->
+          <div class="btn-group btn-group-toggle btn-group-segment" data-toggle="buttons">
+            <label class="btn">
+              <input type="radio" name="rightToWorkInUkLabelOptions" id="rightToWorkInUkLabelOption1"> <i class="fas fa-check mr-1"></i> Yes
+            </label>
+            <label class="btn">
+              <input type="radio" name="rightToWorkInUkLabelOptions" id="rightToWorkInUkLabelOption2"> <i class="fas fa-times mr-1"></i> No
+            </label>
+          </div>
+          <!-- End Button Group -->
+        </div>
+        <!-- End Form Group -->
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label for="noticePeriod" class="input-label">Notice Period</label>
+          <input type="text" class="form-control" name="noticePeriod" id="noticePeriod" placeholder="2 months" aria-label="2 months">
+        </div>
+        <!-- End Form Group -->
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label class="input-label">Upload your portfolio <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top" title="Maximum file size 10 MB."></i></label>
+  
+          <div id="portfolioAttach" class="js-dropzone dz-dropzone dz-dropzone-boxed">
+            <div class="dz-message p-2">
+              <span class="d-block mb-1">Browse your files</span>
+              <small class="d-block text-muted">or drag' n' drop here</small>
+            </div>
+          </div>
+        </div>
+        <!-- End Form Group -->
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label for="expectedSalary" class="input-label">Expected salary</label>
+          <input type="text" class="form-control" name="expectedSalary" id="expectedSalary" placeholder="2 months" aria-label="2 months">
+        </div>
+        <!-- End Form Group -->
+  
+        <!-- Form Group -->
+        <div class="form-group">
+          <label class="input-label">Do you have experience designing for mobile?</label>
+  
+          <!-- Button Group -->
+          <div class="btn-group btn-group-toggle btn-group-segment" data-toggle="buttons">
+            <label class="btn">
+              <input type="radio" name="experienceInSimilaryAreaOptions" id="experienceInSimilaryAreaOption1"> <i class="fas fa-check mr-1"></i> Yes
+            </label>
+            <label class="btn">
+              <input type="radio" name="experienceInSimilaryAreaOptions" id="experienceInSimilaryAreaOption2"> <i class="fas fa-times mr-1"></i> No
+            </label>
+          </div>
+          <!-- End Button Group -->
+        </div>
+        <!-- End Form Group -->
+  
+        <div class="mt-7">
+          <button type="submit" class="btn btn-block btn-primary">Submit application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Description Section -->
+
+
+  <div class="text-center m-5">
+    <form onsubmit="return fetchpost()">
+        <!-- <input class="btn btn-secondary" type="file" id="file" name="myFile"> -->
+        <label for="formFile" class="form-label">Upload a FASTQ file</label>
+
+        <div class="input-group mb-3">
+            <input class="form-control" type="file" id="formFile">
+            <button class="btn btn-primary" type="submit" id="submit-button">
+              <span id="submit-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+              <span class="sr-only">Identify pathogen</span>
+              </button>
+        </div>
+
+    </form>
+
+    <div class="m-5">
+        <samp class="results">
+        <p>Results will be shown here...</p>
+    </samp>
+
+    </div>
+
+
+</div>
+
+<script>
+    var results = document.querySelector('.results');
+    let spinner = document.querySelector('#submit-spinner')
+    let button = document.querySelector('#submit-button')
+
+    function fetchpost() {
+
+        // Activate spinner
+
+        spinner.style.display = "inline-block"
+        button.disabled = true
+        button.lastElementChild.innerText = "Matching kmers..."
+
+        // (A) GET FORM DATA
+        let data = new FormData();
+        let fileField = document.querySelector('input[type="file"]');
+        data.append("fastq", fileField.files[0]);
+
+        // (B) FETCH
+        fetch("https://rappseq-api-zrvf6kau3q-de.a.run.app/identify", {
+                method: 'post',
+                body: data
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(text) {
+                console.log(text);
+                spinner.style.display = "none"
+                button.lastElementChild.innerText = "Identify pathogen"
+                button.disabled = false
+                results.innerHTML = JSON.stringify(text);
+            })
+            .catch(function(error) {
+                console.log(error)
+            });
+
+        // (C) PREVENT HTML FORM SUBMIT
+        return false;
+    }
+</script>  */}}
+{{ end }}
