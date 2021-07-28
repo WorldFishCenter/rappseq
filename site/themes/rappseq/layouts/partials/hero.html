@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<div class="clearfix space-bottom-1 space-bottom-md-2">
+<div class="clearfix space-bottom-0">
     {{ $hero_image := resources.Get .background_image  | images.Filter (images.GaussianBlur 5) }}
     <div class="bg-img-hero gradient-x-overlay-lg-dark" style="background-image: url({{ $hero_image.RelPermalink }});">
        <div class="d-md-flex space-3 space-md-0">
