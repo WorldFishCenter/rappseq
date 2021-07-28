@@ -1,4 +1,8 @@
-<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-<script>
-  feather.replace()
-</script>
+ <!-- JS Global Compulsory -->
+{{ $jquery := resources.Get "front-v3.3/node_modules/jquery/dist/jquery.min.js" }}
+{{ $jquery_migrate:= resources.Get "front-v3.3/node_modules/jquery-migrate/dist/jquery-migrate.min.js" }}
+{{ $bootstrap:= resources.Get "front-v3.3/node_modules/bootstrap/dist/js/bootstrap.min.js" }}
+{{ $hs_core := resources.Get "front-v3.3/src/assets/js/hs.core.js" }}
+{{ $js := slice $jquery $jquery_migrate $bootstrap $hs_core | resources.Concat "js/bundle.js" }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+{{ partial "customjs.html" . }}
