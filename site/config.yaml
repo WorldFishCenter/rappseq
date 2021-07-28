@@ -20,4 +20,10 @@ menu:
       parent: "Identification"
       weight: 1
       pill: v0.0.1
+  footer:
+    - name: Privacy policy
+      url: /privacy-policy/
+    - name: Terms of service
+      url: /terms-of-service/
+    
     

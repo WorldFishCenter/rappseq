@@ -1,2 +1,28 @@
 {{ $cpholder := print .Site.Params.copyrightHolder | safeHTML }}
-<p class="footer text-center muted"><small>Copyright (c) {{ now.Format "2006"}} {{ $cpholder}}</small></p>
+
+<footer>
+    <div class="container space-1">
+        <div class="text-center mx-auto">
+            <div class="row align-items-center ">
+                <div class="col mb-2">
+                  <!-- Nav Link -->
+                  <ul class="nav nav-sm nav-x-sm align-items-center justify-content-center">
+                      {{ $len := (len .Site.Menus.footer )}}
+                      {{ range $index, $element := .Site.Menus.footer }}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                      </li>
+                      {{ if (not (eq (add $index 1) $len))}}
+                      <li class="nav-item opacity mx-3">/</li>
+                      {{ end }}
+                      {{ end }}
+                  </ul>
+                  <!-- End Nav Link -->
+                </div>
+        </div>
+        <div class="w-md-75 text-center mx-auto">
+            <p class="muted small">Copyright (c) {{ now.Format "2006"}} {{ $cpholder}} All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+  <!-- ========== END FOOTER ========== -->
