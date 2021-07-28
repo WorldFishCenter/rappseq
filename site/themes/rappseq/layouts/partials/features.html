@@ -1,0 +1,40 @@
+{{ $image_1 := resources.Get (index (.Params.features.images) 0) }}
+
+  <!-- Features Section -->
+  <div class="container-fluid space-1 space-sm-2" id="features">
+<div class="position-relative">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-9 mb-7 mb-md-0">
+          <div class="w-md-60 mb-7">
+            <h2 class="h1">{{ .Params.features.header}}</h2>
+            {{ .Params.features.content | markdownify }}
+          </div>
+  
+          <div class="row">
+                {{ range .Params.features.features }}
+                <div class="col-md-6 mb-3">
+                    <!-- Card -->
+                    <div class="card h-100">
+                      <div class="card-body">
+                        {{/*  <figure class="max-w-8rem mb-3">  */}}
+                            <i class="{{ .icon }}"></i>
+                        {{/*  </figure>  */}}
+                        {{ .content | markdownify }}
+                      </div>
+                    </div>
+                    <!-- End Card -->
+                  </div>
+                {{ end }}
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+      <!-- End Row -->
+    </div>
+  
+    <div class="hero-v1 d-none d-md-block" style="background-image: url({{ $image_1.RelPermalink }});"></div>
+  </div>
+  </div>
+
+  <!-- End Features Section -->

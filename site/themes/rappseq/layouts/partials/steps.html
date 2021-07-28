@@ -1,0 +1,25 @@
+<!-- Step Section -->
+<div class="container space-1 space-md-2">
+    <!-- Title -->
+    <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+      <span class="d-block small font-weight-bold text-cap mb-2">Always improving</span>
+      {{ .Params.steps.content | markdownify }}
+    </div>
+    <!-- End Title -->
+  
+    <!-- Step -->
+    <ul class="step step-lg step-centered step-border-last-0 ">
+        {{ range $index, $element := .Params.steps.steps }}
+        <li class="step-item">
+            <div class="step-content-wrapper">
+              <span class="step-icon step-icon-soft-primary">{{ add 1 $index }}</span>
+              <div class="step-content">
+                {{ $element | markdownify}}
+              </div>
+            </div>
+          </li>
+        {{ end }}
+    </ul>
+    <!-- End Step -->
+  </div>
+  <!-- End Step Section -->

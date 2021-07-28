@@ -1,0 +1,16 @@
+<!-- Hero Section -->
+<div class="clearfix space-bottom-1 space-bottom-md-2">
+    {{ $hero_image := resources.Get .background_image  | images.Filter (images.GaussianBlur 5) }}
+    <div class="bg-img-hero gradient-x-overlay-lg-dark" style="background-image: url({{ $hero_image.RelPermalink }});">
+       <div class="d-md-flex space-3 space-md-0">
+        <div class="container d-md-flex justify-content-md-center align-items-md-center flex-md-column min-vh-md-100 text-center">
+          <h1 class="display-1 text-white">{{ .Title }}</h1>
+          <p class="lead text-white">{{ .lead_text }}</p>
+          <a class="btn btn-secondary btn-wide transition-3d-hover my-2" href="{{ .button_link }}">
+              {{ .button_text}} <i class="fas fa-angle-right fa-sm ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero Section -->
