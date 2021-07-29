@@ -3,6 +3,7 @@
 //
 $wfblue: #1a4985;
 $wfgreen: #58AB47;
+$wfdarkblue: #12335d;
 
 $primary: $wfblue;
 $secondary: $wfgreen;
@@ -11,7 +12,7 @@ $font-family-base: "Poppins", Helvetica, Arial, sans-serif !default;
 $theme-colors: (
   "primary": $wfblue,
   "secondary": $wfgreen,
-  "dark": $wfblue
+  "dark": $wfdarkblue
   );
 
 // Example of a variable override to change Front's primary color and font size
