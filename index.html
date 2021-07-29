@@ -42,9 +42,14 @@ Identification
 Pathogens
 </a>
 </li>
+<li class="position-static navbar-nav-item">
+<a id=ManagementMenu class=nav-link href=/rappseq/disease-management/ role=button>
+Management
+</a>
+</li>
 <li class=navbar-nav-last-item>
-<a class="btn btn-sm btn-primary transition-3d-hover" href=https://worldfishcenter.github.io/rappseq//identify>
-Try Now
+<a class="btn btn-sm btn-primary transition-3d-hover" href=/rappseq/identify>
+ID a pathogen
 </a>
 </li>
 </ul>
@@ -67,51 +72,63 @@ Learn more <i class="fas fa-angle-right fa-sm ml-1"></i>
 </div>
 </div>
 </div>
-<div class="container-fluid space-2 bg-soft-primary" id=features>
+<div class="container-fluid space-2 space-lg-3 bg-soft-primary" id=features>
 <div class=position-relative>
 <div class=container>
 <div class="row align-items-center">
 <div class="col-12 col-lg-9 mb-0">
 <div class="w-md-60 mb-7">
 <h2 class=h1>AquaPath helps you make better decisions</h2>
-<p>AquaPath is an Rapid Identification System for Aquaculture Pathogens.</p>
-<p>Traditional methods are slow, expensive, and do not have enough resolution to precisely know what&rsquo;s killing the animals in your farm.</p>
-<p>Coupled with the lab-in-a-backpack, AquaPath will help you to identify exactly what&rsquo;s the pathogen that&rsquo;s killing your animals so you can make decisions.</p>
+<p>AquaPath is a cloud based tool for rapid identification of aquaculture pathogens.</p>
+<p>Traditional methods are slow, expensive, and do not have enough resolution to precisely know what&rsquo;s killing the animals in your aquaculture farm. It can be hard to know the best way forward.</p>
+<p>Coupled with the lab-in-a-backpack, AquaPath will help you identify aquaculture pathogens so you can make better decisions to protect your animals and your people.</p>
 </div>
 <div class=row>
 <div class="col-md-6 mb-3">
 <div class="card h-100">
 <div class=card-body>
-<i class="fas fa-stroopwafel"></i>
-<h4 id=cheaper-and-faster>Cheaper and faster</h4>
-<p>AquaPath is faster than traditional diagnostic methods (e.g. molecular, phenotyping, serology) at a fraction of the cost.
+<i class="fas fa-bacteria fa-3x mb-3"></i>
+<h4 id=know-your-pathogen>Know your pathogen</h4>
+<p>AquaPath can help you identify bacterial pathogens. Both at the species level and using MLST sequences.
+<p>
+<a href=/rappseq/disease-management#identification>Learn more <i class="fas fa-angle-right align-middle ml-1"></i></a>
+</p>
 </div>
 </div>
 </div>
 <div class="col-md-6 mb-3">
 <div class="card h-100">
 <div class=card-body>
-<i></i>
-<h4 id=better-managent-and-treatment>Better managent and treatment</h4>
-<p>AquaPath&rsquo;s high resolution allows you to identify the most effective course of action.
+<i class="fas fa-medkit fa-3x mb-3"></i>
+<h4 id=treat-your-animals>Treat your animals</h4>
+<p>Use data to guide antibiotic treatments. Prevent antibiotic overuse and reduce the risk of resistance.
+<p>
+<a href=/rappseq/disease-management#treatment>Learn more <i class="fas fa-angle-right align-middle ml-1"></i></a>
+</p>
 </div>
 </div>
 </div>
 <div class="col-md-6 mb-3">
 <div class="card h-100">
 <div class=card-body>
-<i></i>
-<h4 id=prevent-future-outbreaks>Prevent future outbreaks</h4>
-<p>Vaccines and
+<i class="fas fa-shield-virus fa-3x mb-3"></i>
+<h4 id=prevent-future-disease>Prevent future disease</h4>
+<p>Learn the best preventive measures and support the development of locally produced autogenous vaccines.
+<p>
+<a href=/rappseq/disease-management#prevent>Learn more <i class="fas fa-angle-right align-middle ml-1"></i></a>
+</p>
 </div>
 </div>
 </div>
 <div class="col-md-6 mb-3">
 <div class="card h-100">
 <div class=card-body>
-<i></i>
-<h4 id=easy-to-use>Easy to use</h4>
-<p>Text about how east to use and identify conmpared to other approaches
+<i class="fas fa-procedures fa-3x mb-3"></i>
+<h4 id=human-safety>Human safety</h4>
+<p>Detect and eliminate the risk of zoonotic and food-borne diseases before it reaches consumers.
+<p>
+<a href=/rappseq/disease-management#human-safety>Learn more <i class="fas fa-angle-right align-middle ml-1"></i></a>
+</p>
 </div>
 </div>
 </div>
@@ -123,12 +140,13 @@ Learn more <i class="fas fa-angle-right fa-sm ml-1"></i>
 </div>
 </div>
 <div class=container-fluid>
-<div class="container space-1 space-md-2">
+<div class="container space-2 space-lg-3">
 <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
 <span class="d-block small font-weight-bold text-cap mb-2">
 AquaPath's pipeline
 </span>
 <h2 id=three-simple-steps-to-better-information>Three simple steps to better information</h2>
+<p>If you already have DNA sequences in a FASTQ format you can use our online identification tool straight away. If not, don&rsquo;t worry, getting the DNA is easier and more cost-efficient than you might think.
 </div>
 <ul class="step step-lg step-centered step-border-last-0">
 <li class=step-item>
@@ -136,8 +154,15 @@ AquaPath's pipeline
 <span class="step-icon step-icon-soft-primary">1</span>
 <div class=step-content>
 <h3 id=collect-samples-and-gather-information>Collect samples and gather information</h3>
-<p>Gather some information about water quality, mortality, and signs of disease. Then use our or easy-to-use collection kits to obtain samples from diseased animals.</p>
-<p><a href=#>Get a collection kit</a></p>
+<p>Gather some information about water quality, mortality, and signs of disease. Then use our or easy-to-use collection kits to obtain samples from diseased animals.
+<p>
+<a class="btn btn-outline-primary btn-wide transition-3d-hover my-2" href=/rappseq/>
+<i class="fas fa-notes-medical d-none mr-1 d-sm-inline"></i>
+<span>
+Get a collection kit <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline"></i>
+</span>
+</a>
+</p>
 </div>
 </div>
 </li>
@@ -145,9 +170,16 @@ AquaPath's pipeline
 <div class=step-content-wrapper>
 <span class="step-icon step-icon-soft-primary">2</span>
 <div class=step-content>
-<h3 id=extact-and-sequence-pathogen-dna>Extact and sequence pathogen DNA</h3>
-<p>Send the samples to a nearby lab where a trained operator will extract the DNA from pathogens in the sample and generate nanopore sequences.</p>
-<p><a href=#>Find a lab near you</a></p>
+<h3 id=extract-and-sequence-pathogen-dna>Extract and sequence pathogen DNA</h3>
+<p>Send the samples to a nearby lab where a trained operator will extract the DNA from pathogens in the sample and generate nanopore sequences.
+<p>
+<a class="btn btn-outline-primary btn-wide transition-3d-hover my-2" href=/rappseq/#>
+<i class="fas fa-dna d-none mr-1 d-sm-inline"></i>
+<span>
+Find a lab near you <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline"></i>
+</span>
+</a>
+</p>
 </div>
 </div>
 </li>
@@ -156,12 +188,39 @@ AquaPath's pipeline
 <span class="step-icon step-icon-soft-primary">3</span>
 <div class=step-content>
 <h3 id=use-aquapaths-identification-tool>Use AquaPath&rsquo;s identification tool</h3>
-<p>Use our cloud based tool to identify the pathogen based on the sequences. You&rsquo;ll get relevant clinical and epidemiological information.</p>
-<p><a href=#>Use the tool</a></p>
+<p>Answer a few questions in our cloud based tool to identify the pathogen based on the sequences. You&rsquo;ll get relevant clinical and epidemiological information.
+<p>
+<a class="btn btn-outline-primary btn-wide transition-3d-hover my-2" href=/rappseq/identify/>
+<i class="fas fa-laptop-medical d-none mr-1 d-sm-inline"></i>
+<span>
+Use our online tool <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline"></i>
+</span>
+</a>
+</p>
 </div>
 </div>
 </li>
 </ul>
+</div>
+</div>
+<div class="container-fluid bg-soft-secondary">
+<div class="container space-2 space-lg-3">
+<div class="w-md-80 w-lg-50 text-center mx-md-auto">
+<div class=mb-5>
+<span class="d-block small font-weight-bold text-cap mb-2">Subscribe</span>
+<h2>Get the latest from AquaPath</h2>
+</div>
+<form class="js-validate mb-2">
+<label class=sr-only for=signupSrEmailExample2>Email</label>
+<div class=input-group>
+<input type=email class=form-control name=email id=signupSrEmailExample2 placeholder=your@email.com aria-label=your@email.com required>
+<div class=input-group-append>
+<button type=submit class="btn btn-block btn-primary px-4 px-md-5">Join</button>
+</div>
+</div>
+</form>
+<p class=small>You can unsubscribe at any time. Read our <a href=/rappseq/privacy-policy>privacy policy</a></p>
+</div>
 </div>
 </div>
 </div>
