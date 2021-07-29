@@ -12,14 +12,17 @@ menu:
       url: "/pathogens/"
     - name: Identification
       weight: 1
-    - name: Documentation
-      url: /identify/documentation
+    - name: How does it work?
+      url: /how-does-it-work/
+      weight: 2
+      parent: "Identification"
+    - name: Our classifiers
+      url: /classifiers/
       parent: "Identification"
     - name: Identification tool
       url: /identify/
       parent: "Identification"
       weight: 1
-      pill: v0.0.1
   footer:
     - name: Privacy policy
       url: /privacy-policy/
