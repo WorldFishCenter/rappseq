@@ -23,6 +23,8 @@ menu:
       url: /identify/
       parent: "Identification"
       weight: 1
+    - name: Management
+      url: /disease-management/
   footer:
     - name: Privacy policy
       url: /privacy-policy/
