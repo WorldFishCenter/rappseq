@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel=stylesheet>
 <script src=https://kit.fontawesome.com/187a33bf75.js crossorigin=anonymous></script>
 <link rel=stylesheet href=https://worldfishcenter.github.io/rappseq/scss/theme.css>
-<title>AquaPath | Identification tool</title>
+<title>AquaPath | How does AquaPath work?</title>
 </head><body>
 <header id=header class=header>
 <div class=header-section>
@@ -53,19 +53,25 @@ Try Now
 </div>
 </header>
 <div id=content>
-<div class="container-flex bg-soft-secondary">
-<div class="container d-lg-flex align-items-lg-center vh-lg-100 space-3 space-bottom-lg-3 space-lg-0">
-<div class="row justify-content-md-center align-items-lg-center w-100 mt-lg-9">
-<div class=col-lg-5>
-<div class=mb-4>
-<h2 class=h1>We're coming soon.</h2>
-<p>Stay tuned. This section is currently under construction.</p>
+<div class="container-flex space-2">
+<div class=container>
+<div class="row justify-content-center">
+<div class="col col-lg-8">
+<h1 class=mb-4>How does AquaPath work?</h1>
+<p>AquaPathRapIds is a cloud-based analytical portal designed for rapid genomic identification of aquaculture pathogens.</p>
+<p>It is based on long read sequence data generated on Oxford Nanopore Technologies (ONT) portable sequencing platform, usually a MinION device.</p>
+<p>The portal includes several in-built classifiers for reliable identification of bacterial pathogens at species, serotype, biotype and MLST (multilocus sequence type) levels.</p>
+<p>In brief, users enter long read nanopore sequence data they generated from unknown bacterial DNA by uploading a FASTQ file (standard output text file for ONT platform. When users select the “assign” button, our inbuilt classifiers compare the sequence or sequences against our reference database that is dimensionally compressed for storage and speed, by retaining only diagnostic k20-mers (short overlapping substrings) that are unique to each taxon. It usually takes about 10-20s for every 1000 sequences uploaded for the classifiers to process and return output results to users.</p>
+<p>Output results displayed on the portal are used to guide users on the genus, species, sequence type (ST), biotype and/or serotype-level ID of the sequenced bacterial pathogen but also provide safety alerts to human (zoonotic/foodborne pathogens) and aquatic animals with some immediate recommendations to deal with the disease.</p>
+<p>For more information about our long read classifiers see below.</p>
+<p class="small mt-4">
+<span>Last updated: <time datetime=2021-07-26>Jul 26, 2021</time></span>
+</p>
 </div>
-<a class="btn btn-wide btn-primary transition-3d-hover" href=https://worldfishcenter.github.io/rappseq/>Back Home</a>
 </div>
 </div>
 </div>
-</div>
+<hr>
 </div>
 <footer>
 <div class="container space-1">
