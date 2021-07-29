@@ -41,8 +41,9 @@ features:
 
         Text about how east to use and identify conmpared to other approaches
 steps:
+  heading: AquaPath's pipeline
   content: |
-    ## AquaPath is part of a simple pipeline
+    ## Three simple steps to better information
   steps: 
     - |
       ### Collect samples and gather information
