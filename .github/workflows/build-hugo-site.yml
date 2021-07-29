@@ -2,10 +2,12 @@
 on:
   push:
     paths: 
-      - 'site/*'
+      - 'site/**'
       - '.github/workflows/build-hugo-site.yml'
     branches:
       - main
+
+name: Deploy static website
 
 jobs:
   build-site:
