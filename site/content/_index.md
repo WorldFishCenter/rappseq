@@ -44,23 +44,28 @@ steps:
   heading: AquaPath's pipeline
   content: |
     ## Three simple steps to better information
+
+    If you already have DNA sequences in a FASTQ format you can use our online identification tool straight away. If not, don't worry, getting the DNA is easier and more cost-efficient than you might think.
   steps: 
-    - |
-      ### Collect samples and gather information
+    - link_text: Get a collection kit
+      icon: fas fa-notes-medical 
+      url: #
+      content: |
+        ### Collect samples and gather information
 
-      Gather some information about water quality, mortality, and signs of disease. Then use our or easy-to-use collection kits to obtain samples from diseased animals. 
-
-      [Get a collection kit](#)
-    - |
-      ### Extact and sequence pathogen DNA
+        Gather some information about water quality, mortality, and signs of disease. Then use our or easy-to-use collection kits to obtain samples from diseased animals. 
+    - link_text: Find a lab near you
+      url: "#"
+      icon: fas fa-dna
+      content: |
+        ### Extract and sequence pathogen DNA
       
-      Send the samples to a nearby lab where a trained operator will extract the DNA from pathogens in the sample and generate nanopore sequences. 
-      
-      [Find a lab near you](#)
-    - |
-      ### Use AquaPath's identification tool
+        Send the samples to a nearby lab where a trained operator will extract the DNA from pathogens in the sample and generate nanopore sequences. 
+    - link_text: Use our online tool
+      icon: fas fa-laptop-medical
+      url: /identify/
+      content: |
+        ### Use AquaPath's identification tool
 
-      Use our cloud based tool to identify the pathogen based on the sequences. You'll get relevant clinical and epidemiological information.
-
-      [Use the tool](#)
+        Answer a few questions in our cloud based tool to identify the pathogen based on the sequences. You'll get relevant clinical and epidemiological information.
 ---

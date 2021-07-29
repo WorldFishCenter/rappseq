@@ -1,6 +1,6 @@
 <!-- Step Section -->
 <div class="container-fluid">
-<div class="container space-1 space-md-2">
+<div class="container space-2 space-lg-3">
     <!-- Title -->
     <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
       <span class="d-block small font-weight-bold text-cap mb-2">
@@ -17,7 +17,19 @@
             <div class="step-content-wrapper">
               <span class="step-icon step-icon-soft-primary">{{ add 1 $index }}</span>
               <div class="step-content">
-                {{ $element | markdownify}}
+                {{ $element.content | markdownify}}
+                <p>
+                  <a class="btn btn-outline-primary btn-wide transition-3d-hover my-2" href="{{ $element.url | relURL }}">
+                    {{ with $element.icon }} 
+                    <i class="{{ . }} d-none mr-1 d-sm-inline"></i>
+                    {{ end }}
+                    
+                    <span class="">
+                      {{ $element.link_text | markdownify}} <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline"></i>
+                    </span>
+                </a>
+                </p>
+                
               </div>
             </div>
           </li>
