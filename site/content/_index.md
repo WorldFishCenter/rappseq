@@ -14,32 +14,56 @@ features:
     - images/kid-square.png
   content: |
 
-    AquaPath is an Rapid Identification System for Aquaculture Pathogens.
+    AquaPath is a cloud based tool for rapid identification of aquaculture pathogens.
 
-    Traditional methods are slow, expensive, and do not have enough resolution to precisely know what's killing the animals in your farm. 
+    Traditional methods are slow, expensive, and do not have enough resolution to precisely know what's killing the animals in your aquaculture farm. It can be hard to know the best way forward. 
     
-    Coupled with the lab-in-a-backpack, AquaPath will help you to identify exactly what's the pathogen that's killing your animals so you can make decisions.
+    Coupled with the lab-in-a-backpack, AquaPath will help you identify aquaculture pathogens so you can make better decisions to protect your animals and your people.
   features:
-    - icon: fas fa-stroopwafel
+    - icon: fas fa-bacteria
+      url: /disease-management#identification
       content: |
-        #### Cheaper and faster
+        #### Know your pathogen
 
-        AquaPath is faster than traditional diagnostic methods (e.g. molecular, phenotyping, serology) at a fraction of the cost.
-    - icon:
+        AquaPath can help you identify bacterial pathogens. Both at the species level and using MLST sequences. 
+    - icon: fas fa-medkit
+      url: /disease-management#treatment
       content: |
-        #### Better managent and treatment
+        #### Treat your animals
 
-        AquaPath's high resolution allows you to identify the most effective course of action. 
-    - icon: 
+        Use data to guide antibiotic treatments. Prevent antibiotic overuse and reduce the risk of resistance. 
+    - icon: fas fa-shield-virus
+      url: /disease-management#prevent
       content: |
-        #### Prevent future outbreaks 
+        #### Prevent future disease
 
-        Vaccines and 
-    - icon: 
+        Learn the best preventive measures and support the development of locally produced autogenous vaccines.
+    - icon: fas fa-procedures
+      url: /disease-management#human-safety
       content: |
-        #### Easy to use
+        #### Human safety
 
-        Text about how east to use and identify conmpared to other approaches
+        Detect and eliminate the risk of zoonotic and food-borne diseases before it reaches consumers.
+    # - icon: fas fa-stroopwafel
+    #   content: |
+    #     #### Cheaper and faster
+
+    #     AquaPath is faster than traditional diagnostic methods (e.g. molecular, phenotyping, serology) at a fraction of the cost.
+    # - icon:
+    #   content: |
+    #     #### Better managent and treatment
+
+    #     AquaPath's high resolution allows you to identify the most effective course of action. 
+    # - icon: 
+    #   content: |
+    #     #### Prevent future outbreaks 
+
+    #     Vaccines and 
+    # - icon: 
+    #   content: |
+    #     #### Easy to use
+
+    #     Text about how east to use and identify conmpared to other approaches
 steps:
   heading: AquaPath's pipeline
   content: |
