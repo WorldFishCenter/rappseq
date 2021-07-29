@@ -71,6 +71,24 @@ ID a pathogen
 </div>
 </div>
 </div>
+<div class="text-center m-5">
+<form onsubmit="return fetchpost()">
+<label for=formFile class=form-label>Upload a FASTQ file</label>
+<div class="input-group mb-3">
+<input class=form-control type=file id=formFile>
+<button class="btn btn-primary" type=submit id=submit-button>
+<span id=submit-spinner class="spinner-border spinner-border-sm" role=status aria-hidden=true style=display:none></span>
+<span>Identify pathogen</span>
+</button>
+</div>
+</form>
+<div class=m-5>
+<samp class=results>
+<p>Results will be shown here...</p>
+</samp>
+</div>
+</div>
+<script>var results=document.querySelector('.results');let spinner=document.querySelector('#submit-spinner'),button=document.querySelector('#submit-button');function fetchpost(){spinner.style.display="inline-block",button.disabled=!0,button.lastElementChild.innerText="Matching kmers...";let a=new FormData,b=document.querySelector('input[type="file"]');return a.append("fastq",b.files[0]),fetch("https://rappseq-api-zrvf6kau3q-de.a.run.app/identify",{method:'post',body:a}).then(function(a){return a.json()}).then(function(a){console.log(a),spinner.style.display="none",button.lastElementChild.innerText="Identify pathogen",button.disabled=!1,results.innerHTML=JSON.stringify(a)}).catch(function(a){console.log(a)}),!1}</script>
 </div>
 <footer>
 <div class="container space-1">
