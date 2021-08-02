@@ -51,7 +51,7 @@ jobs:
         service: ${{ env.SERVICE }}
         image: ${{ env.CONTAINER_REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
         region: ${{ env.REGION }}
-        flags: "--cpu=1 --memory=4Gi --concurrency=10"
+        flags: "--cpu=1 --memory=4Gi --concurrency=10 --timeout=60m"
 
     - name: Show Output
       run: echo ${{ steps.deploy.outputs.url }}
