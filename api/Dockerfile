@@ -14,7 +14,8 @@ RUN install2.r --error --skipinstalled \
     DBI \
     digest \
     plumber \
-    RSQLite 
+    RSQLite \
+    logger
 
 COPY . /home
 WORKDIR /home
