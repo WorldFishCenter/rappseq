@@ -30,8 +30,8 @@ reccomendations:
   - Do not consume raw farmed fish products contaminated with this pathogen
 safety:
   - Known to primarily infect humans
-  - Limited reports in fish but high risk for transmission from fish to human
-    acquired from eating raw farmed freshwater fish products
+  - Limited reports in freshwater fish but high risk for transmission from fish to human
+    acquired from handling and eating raw farmed freshwater fish products
 hosts:
   - host_name: Fish
     host_type: aquatic food
