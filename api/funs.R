@@ -106,3 +106,16 @@ rc <- function(z){
   names(res) <- tmpnames
   return(res)
 }
+
+
+
+match_all_db <- function(path, db_conn, hash = digest::digest(runif(1))) {
+
+  logger::log_info(hash, " reading fastq file")
+  x <- read_fastq(path, bin = F)
+  logger::log_info(hash, " extracting kmers")
+  ints <- unlist(lapply(x, varcharize, k = 20), use.names = F)
+  logger::log_info(hash, " matching kmers")
+  matches_tbl <- lapply(db_conn, function(x) find_matches(ints, x, hash))
+  lapply(matches_tbl, as.list)
+}
