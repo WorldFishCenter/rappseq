@@ -13,12 +13,13 @@ cors <- function(res) {
 #* @parser octet
 function(req, fastq){
 
+  logger::log_info("parsing request for ", req$body$fastq$filename)
   request_values <- suppressWarnings(mime::parse_multipart(req))
   hash <- digest::digest(request_values$fastq$datapath, "md5", file = TRUE)
-  logger::log_info("generated hash", hash, "for input file", req$body$fastq$filename)
+  logger::log_info(hash, " generated for input file ", request_values$fastq$datapath)
   logger::log_info(hash, " calling matching procedures")
-  matches <- match(request_values$fastq$datapath, db_conn, hash)
-  logger::log_info(hash, " matching completed")
+  matches <- match_all_db(request_values$fastq$datapath, db_conn, hash)
+  logger::log_success(hash, " matching completed")
 
   list(
     data_filename = req$body$fastq$filename,

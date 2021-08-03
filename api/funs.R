@@ -2,6 +2,7 @@
 
 find_matches <- function(ints, this_db, hash){
 
+  logger::log_info(hash, " finding matches in ", this_db@dbname)
   ints_df <- data.frame(kmer = unique(ints), stringsAsFactors = FALSE)
   temp_table_name <- paste0("_", hash, "_",
                             digest::digest(runif(1), algo = "md5"))
