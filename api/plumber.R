@@ -15,11 +15,10 @@ function(req, fastq){
 
   request_values <- suppressWarnings(mime::parse_multipart(req))
   hash <- digest::digest(request_values$fastq$datapath, "md5", file = TRUE)
-  x <- read_fastq(request_values$fastq$datapath, bin = F)
-  ints <- unlist(lapply(x, varcharize, k = 20), use.names = F)
-
-  matches_tbl <- lapply(db_conn, function(x) find_matches(ints, x, hash))
-  matches <- lapply(matches_tbl, as.list)
+  logger::log_info("generated hash", hash, "for input file", req$body$fastq$filename)
+  logger::log_info(hash, " calling matching procedures")
+  matches <- match(request_values$fastq$datapath, db_conn, hash)
+  logger::log_info(hash, " matching completed")
 
   list(
     data_filename = req$body$fastq$filename,
