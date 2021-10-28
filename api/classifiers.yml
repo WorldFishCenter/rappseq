@@ -1,0 +1,17 @@
+sa_mlst:
+  name: Group B Streptococcus- multilocus sequence type
+  binomial_name: Streptococcus agalactiae
+  type: Sequence type
+  db_path: "data/classifiers/GBS/210524.db"
+
+sa_sero:
+  name: Group B Streptococcus- serotype
+  binomial_name: Streptococcus agalactiae
+  type: Serotype
+  db_path: "data/classifiers/GBS/210524_sero.db"
+
+yr_sero:
+  name: Yersinia ruckeri- serotype
+  binomial_name: Yersinia ruckeri
+  type: Serotype
+  db_path: "data/classifiers/GBS/210607.db"

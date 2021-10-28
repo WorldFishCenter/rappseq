@@ -5,10 +5,10 @@ library(plumber)
 logger::log_info("sourcing classifier functions")
 source("funs.R")
 
-db_files <- list(
-  sa_mlst = "data/classifiers/GBS/210524.db",
-  sa_sero = "data/classifiers/GBS/210524_sero.db",
-  yr_sero = "data/classifiers/GBS/210607.db")
+logger::log_info("loading classfier data")
+classifiers <- yaml::read_yaml("classifiers.yml")
+
+db_files <- lapply(classifiers, function(x) x$db_path)
 
 logger::log_info("connecting to kmer databases")
 db_conn <- lapply(db_files, function(x) DBI::dbConnect(RSQLite::SQLite(), x))
