@@ -1,6 +1,6 @@
 {{ define "main"}}
 
-{{ partial "commingsoon" . }}
+<!-- Description Section {{ partial "commingsoon" . }}-->
 
 {{/*
 <!-- Description Section -->
@@ -303,57 +303,22 @@
 
     </form>
 
-    <div class="m-5">
-        <samp class="results">
-        <p>Results will be shown here...</p>
-    </samp>
 
-    </div>
 
 
 </div>
 
-<script>
-    var results = document.querySelector('.results');
-    let spinner = document.querySelector('#submit-spinner')
-    let button = document.querySelector('#submit-button')
+<div class="container-flex space-2">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="results col col-lg-8">
+            <p>Results will be shown here...</p>
+          </div>
+      </div>    
+  </div>
+</div>
 
-    function fetchpost() {
 
-        // Activate spinner
-
-        spinner.style.display = "inline-block"
-        button.disabled = true
-        button.lastElementChild.innerText = "Matching kmers..."
-
-        // (A) GET FORM DATA
-        let data = new FormData();
-        let fileField = document.querySelector('input[type="file"]');
-        data.append("fastq", fileField.files[0]);
-
-        // (B) FETCH
-        fetch("https://rappseq-api-zrvf6kau3q-de.a.run.app/identify", {
-                method: 'post',
-                body: data
-            })
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(text) {
-                console.log(text);
-                spinner.style.display = "none"
-                button.lastElementChild.innerText = "Identify pathogen"
-                button.disabled = false
-                results.innerHTML = JSON.stringify(text);
-            })
-            .catch(function(error) {
-                console.log(error)
-            });
-
-        // (C) PREVENT HTML FORM SUBMIT
-        return false;
-    }
-</script>  
 
 
 {{ end }}

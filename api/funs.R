@@ -108,8 +108,6 @@ rc <- function(z){
   return(res)
 }
 
-
-
 match_all_db <- function(path, db_conn, hash = digest::digest(runif(1))) {
 
   logger::log_info(hash, " reading fastq file")
@@ -117,6 +115,24 @@ match_all_db <- function(path, db_conn, hash = digest::digest(runif(1))) {
   logger::log_info(hash, " extracting kmers")
   ints <- unlist(lapply(x, varcharize, k = 20), use.names = F)
   logger::log_info(hash, " matching kmers")
-  matches_tbl <- lapply(db_conn, function(x) find_matches(ints, x, hash))
-  lapply(matches_tbl, as.list)
+  lapply(db_conn, function(x) find_matches(ints, x, hash))
+}
+
+# Converts the table with matches to a list that can be used as the output of
+# the classifier
+matches_to_list <- function(x, classifier){
+  matches <- mapply(function(x, y) {list(name = x, value = y)}, names(x), x,
+         SIMPLIFY = F, USE.NAMES = FALSE)
+
+  total_matches <- sum(x)
+
+  matches_info <- list(
+    id = classifier,
+    total_matches = total_matches,
+    best_match = list(
+      good = as.logical(x[1] >= 200 & x[1] / total_matches > 0.9),
+      prop = x[1] / total_matches),
+    matches = matches)
+  classifier_info <- classifiers[[classifier]]
+  c(classifier_info, matches_info)
 }
