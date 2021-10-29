@@ -18,7 +18,7 @@ let table_template = {
     '<>': "table",
     'class': "table", 
     'html': [
-        {'<>': "thead", 'class': "thead-light", 'html': [
+        {'<>': "thead", 'class': "", 'html': [
             {'<>': "tr", 'html': [
                 {'<>': "th", "text": "${type}", "scope": "col"}, 
                 {'<>': "th", "text": "Number of matches", "scope": "col"}
@@ -28,6 +28,106 @@ let table_template = {
     ]
 }
 
+json2html.component.add('table',table_template);
+
+let hidden_table_template = {
+    '<>': "div", 'id': "${id}-accordion", 'html': [
+        {'<>': "div", 'class': "card overflow-hidden mb-3", 'html': [
+            {'<>': "div", 'class': "card-header card-collapse", 'id': '${id}-table-heading', 'html': [
+                {'<>': "button", 'class': "btn btn-link btn-block card-btn d-flex justify-content-between p-3 text-primary collapsed", 'data-toggle': 'collapse', 'data-target': '#${id}-table', 'aria-controls': '${id}-table', 'aria-expanded': 'false', 'html': [
+                    {'<>': "span", 'class': "text-truncate", 'text': "Matches table"},
+                    {'<>': "span", 'class': "card-btn-toggle", 'html': [
+                        {'<>': "span", 'class': "card-btn-toggle-default", 'text': "+"}, 
+                        {'<>': "span", 'class': "card-btn-toggle-active", 'text': "-"}
+                    ]}
+                ]}
+            ]}, 
+            {'<>': "div", 'class': "collapse", 'id': '${id}-table', 'aria-labelledby': '${id}-table-heading', 'data-parent': '#${id}-accordion', 'html': [
+                {'<>': "div", 'class': "card-body text-center", 'html': [
+                    {'[]': "table"}
+                ]}
+            ]}
+        ]},
+    ]
+}
+
+json2html.component.add('table-accordion',hidden_table_template);
+
+let classifier_template = {
+    '<>': "div", 
+    'class': "border-bottom my-4 py-3",
+    'html': [
+            {'<>': "h2", 'class': 'mb-4', 'text': "${name}"},
+            {"[]": function(){if(this.best_match.good[0]) return("good_match")}},
+            {"[]": function(){if(!this.best_match.good[0]) return("no_match")}},
+            {"[]": "pathogen_result"},
+            {'<>': "div", 'class': "small", 'html': [
+                {'<>': "dl", 'class': "row mb-0", 'html': [
+                    {'<>': "dt", 'class': "col-sm-4 text-secondary", 'text': "Classifier name"},
+                    {'<>': "dd", 'class': "col-sm-6", 'text': "${name}"},
+                ]},
+                {'<>': "dl", 'class': "row mb-0", 'html': [
+                    {'<>': "dt", 'class': "col-sm-4 text-secondary", 'text': "Level"},
+                    {'<>': "dd", 'class': "col-sm-6", 'text': "${type}"},
+                ]},
+                {'<>': "dl", 'class': "row mb-0", 'html': [
+                    {'<>': "dt", 'class': "col-sm-4 text-secondary", 'text': "Kmer database"},
+                    {'<>': "dd", 'class': "col-sm-6", 'text': "${db_path}"},
+                ]},
+            ]},
+            {'[]': "table-accordion"}
+    ]
+}
+
+json2html.component.add('classifier', classifier_template);
+
+let pathogen_result_template = {'<>': "p", 'class': 'mb-4', "html": [
+    {"text": "The pathogen with the most matches is "},
+    {'<>': "span", "class": "font-weight-bold", "text": "${name} ${matches.0.name}"}, 
+    {"text": " with ${matches.0.value} out of ${total_matches} matches "},
+    {"text": function(){ return('(' + Math.round(this.best_match.prop * 100) + '%)')}},
+]}
+
+json2html.component.add('pathogen_result', pathogen_result_template);
+
+let good_match_template = {"<>": "div", "class": "alert alert-soft-primary", "role" : "alert", 
+"html": [
+    {"<>": "p", "class": "font-weight-bold mb-0", "html": "&#x1F60A; We found a good match for your sequence"},
+]}
+
+let bad_match_template = {"<>": "div", "class": "alert alert-soft-danger", "role" : "alert", 
+"html": [
+    {"<>": "p", "class": "font-weight-bold mb-0", "html": "&#x1F641; We did NOT find a good match for your sequence in our database."},
+]}
+
+json2html.component.add('good_match', good_match_template);
+json2html.component.add('no_match', bad_match_template);
+
+let classification_template = {"<>": "div", "html": [
+    {"<>": "h1", "class": "mb-4", "text": "Identification results"},
+    //{"[]": "pathogen_result", "obj" : function(){return(this.classifiers)}},
+    {'<>': "div", 'class': "my-4 py-3 border-bottom small", 'html': [
+        {'<>': "h3", "class": "mb-4", "text": "Request details"},
+        {'<>': "dl", 'class': "row mb-0", 'html': [
+            {'<>': "dt", 'class': "col-sm-4 text-secondary", 'text': "Sequence file"},
+            {'<>': "dd", 'class': "col-sm-6", 'text': "${data_filename}"},
+        ]},
+        {'<>': "dl", 'class': "row mb-0", 'html': [
+            {'<>': "dt", 'class': "col-sm-4 text-secondary", 'text': "Request ID"},
+            {'<>': "dd", 'class': "col-sm-6", 'text': "${request_id}"},
+        ]},
+        {'<>': "dl", 'class': "row mb-0", 'html': [
+            {'<>': "dt", 'class': "col-sm-4 text-secondary", 'text': "Request time"},
+            {'<>': "dd", 'class': "col-sm-6", 'text': "${request_time} UTC"},
+        ]},
+        {'<>': "dl", 'class': "row mb-0", 'html': [
+            {'<>': "dt", 'class': "col-sm-4 text-secondary", 'text': "Processing time"},
+            {'<>': "dd", 'class': "col-sm-6", 'text': "${running_time} s"},
+        ]},
+    ]},
+    {"[]": "classifier", "obj": function(){return(this.classifiers)}},
+
+]}
 
 function fetchpost() {
     // Activate spinner
@@ -57,7 +157,8 @@ function fetchpost() {
             button.lastElementChild.innerText = "Identify pathogen"
             button.disabled = false
             //results.append();
-            results.innerHTML = json2html.render(text.classifiers[0],table_template);
+            results.innerHTML = json2html.render(text, classification_template);
+            //results.innerHTML = json2html.render(text.classifiers[0],table_template);
         })
         .catch(function(error) {
             console.log(error)
@@ -70,13 +171,22 @@ function fetchpost() {
 // create test data for json2html
 let dummy_data = {
     "data_filename": [
-      "UPM_3_100seqs.fastq"
+      "Mystery4_nano_porechop_400.fastq"
     ],
     "data_content_type": [
       "application/octet-stream"
     ],
+    "request_id": [
+      "bdb2cf42541aafc2ce493f110bba7313"
+    ],
+    "request_time": [
+      "2021-10-29 02:12:14"
+    ],
+    "running_time": [
+      16.173
+    ],
     "data_hash": [
-      "e8035ed367de9f099b42634214f69e05"
+      "c21245232a735279eff56ec9b4b7c78f"
     ],
     "classifiers": [
       {
@@ -95,45 +205,24 @@ let dummy_data = {
         "id": [
           "sa_mlst"
         ],
+        "total_matches": [
+          2310
+        ],
+        "best_match": {
+          "good": [
+            false
+          ],
+          "prop": [
+            0.8143
+          ]
+        },
         "matches": [
           {
             "name": [
-              "22"
+              "260"
             ],
             "value": [
-              74
-            ]
-          },
-          {
-            "name": [
-              "617"
-            ],
-            "value": [
-              61
-            ]
-          },
-          {
-            "name": [
-              "1"
-            ],
-            "value": [
-              50
-            ]
-          },
-          {
-            "name": [
-              "609"
-            ],
-            "value": [
-              33
-            ]
-          },
-          {
-            "name": [
-              "26"
-            ],
-            "value": [
-              29
+              1881
             ]
           },
           {
@@ -141,7 +230,15 @@ let dummy_data = {
               "103"
             ],
             "value": [
-              28
+              87
+            ]
+          },
+          {
+            "name": [
+              "22"
+            ],
+            "value": [
+              78
             ]
           },
           {
@@ -149,31 +246,15 @@ let dummy_data = {
               "261"
             ],
             "value": [
-              23
+              56
             ]
           },
           {
             "name": [
-              "459"
+              "617"
             ],
             "value": [
-              9
-            ]
-          },
-          {
-            "name": [
-              "7"
-            ],
-            "value": [
-              9
-            ]
-          },
-          {
-            "name": [
-              "61"
-            ],
-            "value": [
-              8
+              54
             ]
           },
           {
@@ -181,7 +262,31 @@ let dummy_data = {
               "23"
             ],
             "value": [
-              4
+              42
+            ]
+          },
+          {
+            "name": [
+              "26"
+            ],
+            "value": [
+              25
+            ]
+          },
+          {
+            "name": [
+              "609"
+            ],
+            "value": [
+              19
+            ]
+          },
+          {
+            "name": [
+              "17"
+            ],
+            "value": [
+              16
             ]
           },
           {
@@ -189,7 +294,31 @@ let dummy_data = {
               "552"
             ],
             "value": [
-              4
+              14
+            ]
+          },
+          {
+            "name": [
+              "61"
+            ],
+            "value": [
+              11
+            ]
+          },
+          {
+            "name": [
+              "1"
+            ],
+            "value": [
+              10
+            ]
+          },
+          {
+            "name": [
+              "7"
+            ],
+            "value": [
+              10
             ]
           },
           {
@@ -197,7 +326,15 @@ let dummy_data = {
               "12"
             ],
             "value": [
-              2
+              6
+            ]
+          },
+          {
+            "name": [
+              "459"
+            ],
+            "value": [
+              1
             ]
           }
         ]
@@ -218,45 +355,24 @@ let dummy_data = {
         "id": [
           "sa_sero"
         ],
+        "total_matches": [
+          21064
+        ],
+        "best_match": {
+          "good": [
+            true
+          ],
+          "prop": [
+            0.984
+          ]
+        },
         "matches": [
-          {
-            "name": [
-              "III"
-            ],
-            "value": [
-              541
-            ]
-          },
-          {
-            "name": [
-              "V"
-            ],
-            "value": [
-              118
-            ]
-          },
           {
             "name": [
               "Ib"
             ],
             "value": [
-              109
-            ]
-          },
-          {
-            "name": [
-              "II"
-            ],
-            "value": [
-              82
-            ]
-          },
-          {
-            "name": [
-              "VI"
-            ],
-            "value": [
-              62
+              20728
             ]
           },
           {
@@ -264,7 +380,39 @@ let dummy_data = {
               "Ia"
             ],
             "value": [
-              38
+              113
+            ]
+          },
+          {
+            "name": [
+              "II"
+            ],
+            "value": [
+              89
+            ]
+          },
+          {
+            "name": [
+              "VI"
+            ],
+            "value": [
+              56
+            ]
+          },
+          {
+            "name": [
+              "V"
+            ],
+            "value": [
+              52
+            ]
+          },
+          {
+            "name": [
+              "III"
+            ],
+            "value": [
+              25
             ]
           },
           {
@@ -272,7 +420,7 @@ let dummy_data = {
               "IV"
             ],
             "value": [
-              9
+              1
             ]
           }
         ]
@@ -293,18 +441,21 @@ let dummy_data = {
         "id": [
           "yr_sero"
         ],
+        "total_matches": [
+          2
+        ],
+        "best_match": {
+          "good": [
+            false
+          ],
+          "prop": [
+            1
+          ]
+        },
         "matches": [
           {
             "name": [
               "O1a"
-            ],
-            "value": [
-              2
-            ]
-          },
-          {
-            "name": [
-              "O2"
             ],
             "value": [
               2
@@ -315,3 +466,4 @@ let dummy_data = {
     ]
   }
 
+  //results.innerHTML = json2html.render(dummy_data, classification_template);
