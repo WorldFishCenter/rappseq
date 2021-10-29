@@ -142,8 +142,8 @@ function fetchpost() {
     data.append("fastq", fileField.files[0]);
 
     // (B) FETCH
-    //fetch("https://rappseq-api-zrvf6kau3q-de.a.run.app/identify", {
-    fetch("http://127.0.0.1:4869/identify", {
+    fetch("https://rappseq-api-zrvf6kau3q-de.a.run.app/identify", {
+    //fetch("http://127.0.0.1:4869/identify", {
         
             method: 'post',
             body: data
