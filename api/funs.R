@@ -124,7 +124,15 @@ matches_to_list <- function(x, classifier){
   matches <- mapply(function(x, y) {list(name = x, value = y)}, names(x), x,
          SIMPLIFY = F, USE.NAMES = FALSE)
 
-  matches_info <- list(id = classifier, matches = matches)
+  total_matches <- sum(x)
+
+  matches_info <- list(
+    id = classifier,
+    total_matches = total_matches,
+    best_match = list(
+      good = as.logical(x[1] >= 200 & x[1] / total_matches > 0.9),
+      prop = x[1] / total_matches),
+    matches = matches)
   classifier_info <- classifiers[[classifier]]
   c(classifier_info, matches_info)
 }
