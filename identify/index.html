@@ -58,19 +58,6 @@ ID a pathogen
 </div>
 </header>
 <div id=content>
-<div class="container-flex bg-soft-secondary">
-<div class="container d-lg-flex align-items-lg-center vh-lg-100 space-3 space-bottom-lg-3 space-lg-0">
-<div class="row justify-content-md-center align-items-lg-center w-100 mt-lg-9">
-<div class=col-lg-5>
-<div class=mb-4>
-<h2 class=h1>We're coming soon.</h2>
-<p>Stay tuned. This section is currently under construction.</p>
-</div>
-<a class="btn btn-wide btn-primary transition-3d-hover" href=https://worldfishcenter.github.io/rappseq/>Back Home</a>
-</div>
-</div>
-</div>
-</div>
 <div class="text-center m-5">
 <form onsubmit="return fetchpost()">
 <label for=formFile class=form-label>Upload a FASTQ file</label>
@@ -82,13 +69,16 @@ ID a pathogen
 </button>
 </div>
 </form>
-<div class=m-5>
-<samp class=results>
+</div>
+<div class="container-flex space-2">
+<div class=container>
+<div class="row justify-content-center">
+<div class="results col col-lg-8">
 <p>Results will be shown here...</p>
-</samp>
 </div>
 </div>
-<script>var results=document.querySelector('.results');let spinner=document.querySelector('#submit-spinner'),button=document.querySelector('#submit-button');function fetchpost(){spinner.style.display="inline-block",button.disabled=!0,button.lastElementChild.innerText="Matching kmers...";let a=new FormData,b=document.querySelector('input[type="file"]');return a.append("fastq",b.files[0]),fetch("https://rappseq-api-zrvf6kau3q-de.a.run.app/identify",{method:'post',body:a}).then(function(a){return a.json()}).then(function(a){console.log(a),spinner.style.display="none",button.lastElementChild.innerText="Identify pathogen",button.disabled=!1,results.innerHTML=JSON.stringify(a)}).catch(function(a){console.log(a)}),!1}</script>
+</div>
+</div>
 </div>
 <footer>
 <div class="container space-1">
@@ -112,5 +102,7 @@ ID a pathogen
 </div>
 </footer>
 <script type=text/javascript src=/rappseq/js/bundle.js defer></script>
+<script type=text/javascript src=/rappseq/js/json2html.js defer></script>
+<script type=text/javascript src=/rappseq/js/identify.js defer></script>
 </body>
 </html>
