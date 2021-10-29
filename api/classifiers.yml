@@ -1,5 +1,5 @@
 sa_mlst:
-  name: Group B Streptococcus- multilocus sequence type
+  name: Group B Streptococcus - (multilocus) sequence type
   binomial_name: Streptococcus agalactiae
   type: Sequence type
   db_path: "data/classifiers/GBS/210524.db"
