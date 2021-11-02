@@ -8,14 +8,21 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
   libcurl4-gnutls-dev \
   curl \
   libsodium-dev \
-  libxml2-dev
+  libxml2-dev \
+  python3-dev \
+  python3-pip \
+  python3.8-venv
 
 RUN install2.r --error --skipinstalled \
     DBI \
     digest \
     plumber \
     RSQLite \
-    logger
+    logger \
+    reticulate \
+    config
+
+RUN pip install google-cloud-firestore
 
 COPY . /home
 WORKDIR /home
@@ -23,4 +30,4 @@ WORKDIR /home
 ENTRYPOINT ["R", "--quiet", "-e", "source('api.R')"]
 
 # set default startup command to run the app's "plumber.R" file
-CMD ["api.R"]
+# CMD ["api.R"]
