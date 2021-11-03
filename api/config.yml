@@ -1,0 +1,8 @@
+default:
+  firestore:
+    collection: "match_requests"
+
+dev:
+  firestore:
+    collection: "test_collection"
+

@@ -108,14 +108,14 @@ rc <- function(z){
   return(res)
 }
 
-match_all_db <- function(path, db_conn, hash = digest::digest(runif(1))) {
+match_kmers <- function(path, classifiers, db_conn, hash = digest::digest(runif(1))) {
 
   logger::log_info(hash, " reading fastq file")
   x <- read_fastq(path, bin = F)
   logger::log_info(hash, " extracting kmers")
   ints <- unlist(lapply(x, varcharize, k = 20), use.names = F)
   logger::log_info(hash, " matching kmers")
-  lapply(db_conn, function(x) find_matches(ints, x, hash))
+  lapply(db_conn[classifiers], function(x) find_matches(ints, x, hash))
 }
 
 # Converts the table with matches to a list that can be used as the output of
@@ -135,4 +135,9 @@ matches_to_list <- function(x, classifier){
     matches = matches)
   classifier_info <- classifiers[[classifier]]
   c(classifier_info, matches_info)
+}
+
+decode_classifiers <- function(x){
+  plumber::parser_text(x)
+  strsplit(x, ",")[[1]]
 }

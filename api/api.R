@@ -4,6 +4,9 @@ library(plumber)
 # INITALISATION -----------------------------------------------------------
 logger::log_info("sourcing classifier functions")
 source("funs.R")
+source("R/firestore.R")
+
+firestore <- reticulate::import_from_path("firestore")
 
 logger::log_info("loading classfier data")
 classifiers <- yaml::read_yaml("classifiers.yml")
@@ -28,4 +31,4 @@ pr$registerHooks(
 logger::log_info("initialising API")
 
 pr$run(host = '0.0.0.0', port = as.numeric(Sys.getenv('PORT')))
-# pr$run(quiet = FALSE)
+#pr$run(quiet = FALSE)
