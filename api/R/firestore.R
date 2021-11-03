@@ -12,7 +12,7 @@ load_firestore_module <- function(){
 # Read a record from a database connection, currently using firestore as the backend
 read_record <- function(
   record_id,
-  collection = config::get(config = "dev", value = "firestore")$collection){
+  collection = config::get(value = "firestore")$collection){
 
   load_firestore_module()
   firestore$read_document(document_name = record_id, collection = collection)
@@ -22,7 +22,7 @@ read_record <- function(
 create_record <- function(
   record,
   record_id,
-  collection = config::get(config = "dev", value = "firestore")$collection){
+  collection = config::get(value = "firestore")$collection){
 
   load_firestore_module()
   firestore$create_document(document = record,
@@ -33,7 +33,7 @@ create_record <- function(
 update_record <- function(
   record,
   record_id,
-  collection = config::get(config = "dev", value = "firestore")$collection){
+  collection = config::get(value = "firestore")$collection){
   load_firestore_module()
   firestore$update_document(document = record,
                             document_name = record_id,
@@ -42,8 +42,8 @@ update_record <- function(
 
 check_record <- function(
   record_id,
-  collection = config::get(config = "dev", value = "firestore")$collection){
-    
+  collection = config::get(value = "firestore")$collection){
+
   load_firestore_module()
   firestore$check_document(document_name = record_id, collection = collection)
 }
