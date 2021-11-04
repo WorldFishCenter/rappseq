@@ -19,7 +19,7 @@
               <div class="step-content">
                 {{ $element.content | markdownify}}
                 <p>
-                  <a class="btn btn-outline-primary btn-wide transition-3d-hover my-2" href="{{ $element.url | relURL }}">
+                  <a class="btn btn-outline-primary btn-wide transition-3d-hover my-2 {{ $element.class }}" href="{{ $element.url | relURL }}">
                     {{ with $element.icon }} 
                     <i class="{{ . }} d-none mr-1 d-sm-inline"></i>
                     {{ end }}

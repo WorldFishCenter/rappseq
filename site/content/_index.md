@@ -73,7 +73,8 @@ steps:
   steps: 
     - link_text: Get a collection kit
       icon: fas fa-notes-medical 
-      url: #
+      class: disabled
+      url: "#"
       content: |
         ### Collect samples and gather information
 
@@ -81,6 +82,7 @@ steps:
     - link_text: Find a lab near you
       url: "#"
       icon: fas fa-dna
+      class: disabled
       content: |
         ### Extract and sequence pathogen DNA
       
