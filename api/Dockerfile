@@ -22,7 +22,9 @@ RUN install2.r --error --skipinstalled \
     reticulate \
     config
 
-RUN pip install google-cloud-firestore
+RUN pip install \
+    google-cloud-firestore \
+    google-cloud-storage 
 
 COPY . /home
 WORKDIR /home
