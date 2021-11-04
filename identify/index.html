@@ -37,18 +37,13 @@ Identification
 </div>
 </li>
 <li class="position-static navbar-nav-item">
-<a id=PathogensMenu class=nav-link href=/rappseq/pathogens/ role=button>
-Pathogens
-</a>
-</li>
-<li class="position-static navbar-nav-item">
 <a id=ManagementMenu class=nav-link href=/rappseq/disease-management/ role=button>
 Management
 </a>
 </li>
 <li class=navbar-nav-last-item>
-<a class="btn btn-sm btn-primary transition-3d-hover" href=/rappseq/identify>
-ID a pathogen
+<a class="btn btn-sm btn-ghost-primary transition-3d-hover" href=/rappseq/identify>
+ID a pathogen <i class="fas fa-angle-right fa-sm ml-1"></i>
 </a>
 </li>
 </ul>
@@ -58,25 +53,93 @@ ID a pathogen
 </div>
 </header>
 <div id=content>
-<div class="container-flex bg-soft-secondary">
-<div class="container d-lg-flex align-items-lg-center vh-lg-100 space-3 space-bottom-lg-3 space-lg-0">
-<div class="row justify-content-md-center align-items-lg-center w-100 mt-lg-9">
-<div class=col-lg-5>
-<div class=mb-4>
-<h2 class=h1>We're coming soon.</h2>
-<p>Stay tuned. This section is currently under construction.</p>
-</div>
-<a class="btn btn-wide btn-primary transition-3d-hover" href=https://worldfishcenter.github.io/rappseq/>Back Home</a>
+<div class="container-flex space-2">
+<div class=container>
+<div class=justify-content-center>
+<div class="w-md-80 w-lg-50 mx-md-auto mb-5">
+<div class="mb-5 mb-md-9">
+<span class="d-block small font-weight-bold text-cap mb-2">AquaPath</span>
+<h2 class=h1>Aquaculture pathogen identification tool</h2>
 </div>
 </div>
+<div class="w-lg-80 mx-md-auto">
+<div class="alert alert-soft-primary mb-5 mb-md-9" role=alert>
+<h4 class=alert-heading>
+<i class="fas fa-info-circle mt-1 mr-1"></i>
+Alpha version
+</h4>
+<p>AquaScores' identification tool is currently being tested. We would love to hear your opinion. If you experience any problems, have a question, or have some feedback, please contact Jerôme at <a href=mailto:j.delamare@cgiar.org>j.delamare@cgiar.org</a>.</p>
+</div>
+<form onsubmit="return fetchpost()">
+<div class="row form-group">
+<label for=emailField class="col-sm-3 col-form-label input-label">Email<span class="text-muted small"> (optional)</span> </label>
+<div class=col-sm-9>
+<input type=email class=form-control id=emailField placeholder=your@email.com>
+<span class="text-muted font-size-1">So we can link different requests to you and send you detailed information when available.</span>
+</div>
+</div>
+<div class="row form-group">
+<label class="col-sm-3 col-form-label input-label">Sequence</label>
+<div class=col-sm-9>
+<div class="input-group mb-3">
+<div>
+<input id=formFile name=file-attachment type=file class="js-file-attach custom-file-input" onchange=validate_file(),validate_form() data-hs-file-attach-options='{
+                    "textTarget": "[for=\"formFile\"]", 
+                    "maxFileSize": 102400,
+                    "allowTypes": [".fastq"]
+                  }'>
+<label class=custom-file-label for=formFile>Choose a file</label>
+<span class="text-muted font-size-1">Browse your device and upload a .fastq file. Maximum file size 100 MB</span>
 </div>
 </div>
 </div>
-<footer>
-<div class="container space-1">
-<div class="text-center mx-auto">
-<div class="row align-items-center">
-<div class="col mb-2">
+</div>
+<div class="row form-group">
+<label class="col-sm-3 col-form-label input-label">Classifiers</label>
+<div class=col-sm-9>
+<div class="custom-control custom-checkbox">
+<input type=checkbox class=custom-control-input name=classifier id=sa_mlst value=sa_mlst onchange=validate_classifier(),validate_form()>
+<label class=custom-control-label for=sa_mlst>Group B Streptococcus - (multilocus) sequence type</label>
+</div>
+<div class="custom-control custom-checkbox">
+<input type=checkbox class=custom-control-input name=classifier id=sa_sero value=sa_sero onchange=validate_classifier(),validate_form()>
+<label class=custom-control-label for=sa_sero>Group B Streptococcus- serotype</label>
+</div>
+<div class="custom-control custom-checkbox">
+<input type=checkbox class=custom-control-input name=classifier id=yr_sero value=yr_sero onchange=validate_classifier(),validate_form()>
+<label class=custom-control-label for=yr_sero>Yersinia ruckeri- serotype</label>
+</div>
+</div>
+</div>
+<div class=mt-5>
+<button class="btn btn-secondary" type=submit id=submit-button>
+<span id=submit-spinner class="spinner-border spinner-border-sm" role=status aria-hidden=true style=display:none></span>
+<span>Run ID tool</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="container-flex space-2">
+<div class=container>
+<div class="w-lg-80 mx-md-auto">
+<div class=results>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class=m-0>
+<footer class="container space-2 text-center space-top-xl-3">
+<div class="w-md-80 w-lg-50 mx-auto">
+<a class="d-inline-flex align-items-center mb-3" href=# aria-label=FishScores>
+<h2 class=h3>AquaPath</h2>
+</a>
+<div class="font-size-1 mb-1 mx-md-auto"><p>AquaPath is a joint digital initiative in collaboration with the University of Queensland and Wilderlab.</p>
+</div>
+<div class="d-flex justify-content-center mb-3">
 <ul class="nav nav-sm nav-x-sm align-items-center justify-content-center">
 <li class=nav-item>
 <a class=nav-link href=/rappseq/privacy-policy/>Privacy policy</a>
@@ -87,13 +150,27 @@ ID a pathogen
 </li>
 </ul>
 </div>
-</div>
 <div class="w-md-75 text-center mx-auto">
 <p class="muted small">Copyright (c) 2021 WorldFish All rights reserved.</p>
 </div>
+<div class=small>
+<p class=small>AquaPath is partially funded by the CGIAR Research Programs on Fish Agri-Food Systems (FISH) led by WorldFish, the CGIAR Antimicrobial Resistance Hub on AMR related activities and from the CGIAR Platform for Big Data in Agriculture as part of the 2019 Inspire Challenge prize.</p>
+<p class="small text-muted">
+Online portal developed and designed by
+<a class=text-inherit href=http://cagua.co>Fernando Cagua.</a>
+</p>
+</div>
+<ul class="list-inline mb-0">
+<li class="list-inline-item mb-2 mb-sm-0">
+<a class="btn btn-icon btn-sm btn-ghost-primary rounded-circle" href=https://github.com/orgs/WorldFishCenter/>
+<i class="fab fa-github"></i>
+</a>
+</li>
+</ul>
 </div>
 </footer>
 <script type=text/javascript src=/rappseq/js/bundle.js defer></script>
+<script type=text/javascript src=/rappseq/js/hs-file-attach.min.js defer></script>
 <script type=text/javascript src=/rappseq/js/json2html.js defer></script>
 <script type=text/javascript src=/rappseq/js/identify.js defer></script>
 </body>

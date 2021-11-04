@@ -38,18 +38,13 @@ Identification
 </div>
 </li>
 <li class="position-static navbar-nav-item">
-<a id=PathogensMenu class=nav-link href=/rappseq/pathogens/ role=button>
-Pathogens
-</a>
-</li>
-<li class="position-static navbar-nav-item">
 <a id=ManagementMenu class=nav-link href=/rappseq/disease-management/ role=button>
 Management
 </a>
 </li>
 <li class=navbar-nav-last-item>
-<a class="btn btn-sm btn-primary transition-3d-hover" href=/rappseq/identify>
-ID a pathogen
+<a class="btn btn-sm btn-ghost-primary transition-3d-hover" href=/rappseq/identify>
+ID a pathogen <i class="fas fa-angle-right fa-sm ml-1"></i>
 </a>
 </li>
 </ul>
@@ -65,11 +60,11 @@ ID a pathogen
 <div class="container d-md-flex justify-content-md-center align-items-md-center flex-md-column min-vh-md-100 text-center">
 <h1 class="display-1 text-white">AquaPath.</h1>
 <p class="lead text-white">Rapid and accurate diagnosis for the control and prevention of diseases in aquatic animals</p>
-<a class="btn btn-secondary btn-wide transition-3d-hover my-2" href=#features>
-Learn more <i class="fas fa-angle-right fa-sm ml-1"></i>
-</a>
 <a class="btn btn-light btn-wide transition-3d-hover my-2" href=/rappseq/identify>
 ID a pathogen <i class="fas fa-angle-right fa-sm ml-1"></i>
+</a>
+<a class="btn btn-secondary btn-wide transition-3d-hover my-2" href=#features>
+Learn more
 </a>
 </div>
 </div>
@@ -159,7 +154,7 @@ AquaPath's pipeline
 <h3 id=collect-samples-and-gather-information>Collect samples and gather information</h3>
 <p>Gather some information about water quality, mortality, and signs of disease. Then use our or easy-to-use collection kits to obtain samples from diseased animals.
 <p>
-<a class="btn btn-outline-primary btn-wide transition-3d-hover my-2" href=/rappseq/>
+<a class="btn btn-outline-primary btn-wide transition-3d-hover my-2 disabled" href=/rappseq/#>
 <i class="fas fa-notes-medical d-none mr-1 d-sm-inline"></i>
 <span>
 Get a collection kit <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline"></i>
@@ -176,7 +171,7 @@ Get a collection kit <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline"
 <h3 id=extract-and-sequence-pathogen-dna>Extract and sequence pathogen DNA</h3>
 <p>Send the samples to a nearby lab where a trained operator will extract the DNA from pathogens in the sample and generate nanopore sequences.
 <p>
-<a class="btn btn-outline-primary btn-wide transition-3d-hover my-2" href=/rappseq/#>
+<a class="btn btn-outline-primary btn-wide transition-3d-hover my-2 disabled" href=/rappseq/#>
 <i class="fas fa-dna d-none mr-1 d-sm-inline"></i>
 <span>
 Find a lab near you <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline"></i>
@@ -216,22 +211,26 @@ Use our online tool <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline">
 <form class="js-validate mb-2">
 <label class=sr-only for=signupSrEmailExample2>Email</label>
 <div class=input-group>
-<input type=email class=form-control name=email id=signupSrEmailExample2 placeholder=your@email.com aria-label=your@email.com required>
+<input type=email class=form-control name=email id=signupSrEmailExample2 placeholder=your@email.com aria-label=your@email.com required disabled>
 <div class=input-group-append>
-<button type=submit class="btn btn-block btn-primary px-4 px-md-5">Join</button>
+<button type=submit class="btn btn-block btn-primary px-4 px-md-5 disabled" disabled>Join</button>
 </div>
 </div>
 </form>
-<p class=small>You can unsubscribe at any time. Read our <a href=/rappseq/privacy-policy>privacy policy</a></p>
+<p class=small>The mailing list is comming soon. </a></p>
 </div>
 </div>
 </div>
 </div>
-<footer>
-<div class="container space-1">
-<div class="text-center mx-auto">
-<div class="row align-items-center">
-<div class="col mb-2">
+<hr class=m-0>
+<footer class="container space-2 text-center space-top-xl-3">
+<div class="w-md-80 w-lg-50 mx-auto">
+<a class="d-inline-flex align-items-center mb-3" href=# aria-label=FishScores>
+<h2 class=h3>AquaPath</h2>
+</a>
+<div class="font-size-1 mb-1 mx-md-auto"><p>AquaPath is a joint digital initiative in collaboration with the University of Queensland and Wilderlab.</p>
+</div>
+<div class="d-flex justify-content-center mb-3">
 <ul class="nav nav-sm nav-x-sm align-items-center justify-content-center">
 <li class=nav-item>
 <a class=nav-link href=/rappseq/privacy-policy/>Privacy policy</a>
@@ -242,10 +241,23 @@ Use our online tool <i class="fas fa-angle-right fa-sm ml-1 d-none d-sm-inline">
 </li>
 </ul>
 </div>
-</div>
 <div class="w-md-75 text-center mx-auto">
 <p class="muted small">Copyright (c) 2021 WorldFish All rights reserved.</p>
 </div>
+<div class=small>
+<p class=small>AquaPath is partially funded by the CGIAR Research Programs on Fish Agri-Food Systems (FISH) led by WorldFish, the CGIAR Antimicrobial Resistance Hub on AMR related activities and from the CGIAR Platform for Big Data in Agriculture as part of the 2019 Inspire Challenge prize.</p>
+<p class="small text-muted">
+Online portal developed and designed by
+<a class=text-inherit href=http://cagua.co>Fernando Cagua.</a>
+</p>
+</div>
+<ul class="list-inline mb-0">
+<li class="list-inline-item mb-2 mb-sm-0">
+<a class="btn btn-icon btn-sm btn-ghost-primary rounded-circle" href=https://github.com/orgs/WorldFishCenter/>
+<i class="fab fa-github"></i>
+</a>
+</li>
+</ul>
 </div>
 </footer>
 <script type=text/javascript src=/rappseq/js/bundle.js defer></script>
