@@ -20,7 +20,7 @@ function(req, res){
 
     logger::log_info(request_id, " parsing request for ", req$body$fastq$filename)
     request_values <- suppressWarnings(mime::parse_multipart(req))
-    classifiers <- strsplit(request_values$classifier, ",")[[1]]
+    requested_classifiers <- strsplit(request_values$classifier, ",")[[1]]
 
     file_hash <- digest::digest(request_values$fastq$datapath, "md5", file = TRUE)
     logger::log_info(request_id, " generated hash ", file_hash, " for input file ", request_values$fastq$datapath)
@@ -31,7 +31,9 @@ function(req, res){
         request_id = request_id,
         request_time = request_time,
         data_hash = file_hash,
-        requested_classifiers = classifiers,
+        # Extra element is just to make sure it's saved as an array even when a
+        # single classifier is requested. Horrible but I'm running out of time
+        requested_classifiers = c(requested_classifiers, "___"),
         email = request_values$email,
         match_completed = FALSE)
     create_record(request_info, request_id)
