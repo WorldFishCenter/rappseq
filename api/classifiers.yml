@@ -3,15 +3,24 @@ sa_mlst:
   binomial_name: Streptococcus agalactiae
   type: Sequence type
   db_path: "data/classifiers/GBS/210524.db"
+  acceptance:
+    min_matches: 200
+    min_proportion: 0.9
 
 sa_sero:
   name: Group B Streptococcus- serotype
   binomial_name: Streptococcus agalactiae
   type: Serotype
   db_path: "data/classifiers/GBS/210524_sero.db"
+  acceptance:
+    min_matches: 200
+    min_proportion: 0.9
 
 yr_sero:
   name: Yersinia ruckeri- serotype
   binomial_name: Yersinia ruckeri
   type: Serotype
   db_path: "data/classifiers/GBS/210607.db"
+  acceptance:
+    min_matches: 200
+    min_proportion: 0.9
