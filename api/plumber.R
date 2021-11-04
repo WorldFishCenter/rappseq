@@ -15,7 +15,7 @@ function(req, res){
 
   running_time <- system.time({
 
-    request_time <- Sys.time()
+    request_time <- as.POSIXct(Sys.time(), tz = "UTC")
     request_id <- digest::digest(req)
 
     logger::log_info(request_id, " parsing request for ", req$body$fastq$filename)
