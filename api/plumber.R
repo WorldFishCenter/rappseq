@@ -70,7 +70,7 @@ function(request_id, res){
     return(list(error = "Request not found"))
   } else {
     record <- as.list(record)
-    record$request_time <- NULL
+    record$request_time <- as.character(record$request_time)
   }
 
   return(record)
