@@ -45,12 +45,11 @@ function(req, res){
       data_hash = file_hash)
 
     logger::log_info(request_id, " calling matching procedures")
-    matches <- match_kmers(request_values$fastq$datapath, classifiers, db_conn, file_hash)
-
-    logger::log_info(request_id, " formatting response")
-    classifiers_result <- mapply(
-      matches_to_list, matches, names(matches),
-      SIMPLIFY = FALSE, USE.NAMES = FALSE)
+    classifiers_result <- lapply(
+      X = requested_classifiers,
+      FUN = process_classification,
+      file_hash = file_hash,
+      path = request_values$fastq$datapath)
   })
 
   results <- list(

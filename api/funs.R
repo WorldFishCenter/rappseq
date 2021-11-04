@@ -108,14 +108,9 @@ rc <- function(z){
   return(res)
 }
 
-match_kmers <- function(path, classifiers, db_conn, hash = digest::digest(runif(1))) {
-
-  logger::log_info(hash, " reading fastq file")
+extract_kmers <- function(path){
   x <- read_fastq(path, bin = F)
-  logger::log_info(hash, " extracting kmers")
-  ints <- unlist(lapply(x, varcharize, k = 20), use.names = F)
-  logger::log_info(hash, " matching kmers")
-  lapply(db_conn[classifiers], function(x) find_matches(ints, x, hash))
+  unlist(lapply(x, varcharize, k = 20), use.names = F)
 }
 
 # Converts the table with matches to a list that can be used as the output of
@@ -140,4 +135,31 @@ matches_to_list <- function(x, classifier){
 decode_classifiers <- function(x){
   plumber::parser_text(x)
   strsplit(x, ",")[[1]]
+}
+
+process_classification <- function(classifier, file_hash, path, collection = config::get(value = "firestore")$collection){
+
+  # If the matching has been done previously we can skip the calculations
+  logger::log_debug("Finding a matching classification for file_hash: ", file_hash, ". For classifier: ", classifier, ". In the collection: ", collection)
+  classification <- find_matching_classification(file_hash, classifier, collection)
+  if (length(classification) >= 1){
+    previous_classification <- classification[[1]]
+    logger::log_debug("Found one matching classification. Current db path is ", classifiers[[classifier]]$db_path)
+    previous_dbs <- lapply(previous_classification$matches, function(x) x$db_path)
+    logger::log_debug("previous dbs are ", paste(unlist(previous_dbs), collapse = ","))
+    uses_same_db <- lapply(previous_classification$matches,
+                      function(x) x$db_path == classifiers[[classifier]]$db_path)
+    logger::log_debug("uses_same_db array is ", paste(unlist(uses_same_db), collapse = ","))
+    right_match <- previous_classification$matches[unlist(uses_same_db)]
+    if (length(right_match) >= 1){
+      logger::log_info(file_hash, " previous matching found for classifier ", classifier)
+      return(right_match[[1]])
+    }
+  }
+
+  logger::log_info(file_hash, " finding kmer matches for ", classifier)
+  ints <- extract_kmers(path)
+  matches <- find_matches(ints, db_conn[[classifier]], file_hash)
+  matches_to_list(matches, classifier)
+
 }
