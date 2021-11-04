@@ -1,8 +1,10 @@
 default:
+  loglevel: INFO
   firestore:
     collection: "match_requests"
 
 dev:
+  loglevel: DEBUG
   firestore:
     collection: "test_collection"
 

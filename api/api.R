@@ -2,6 +2,8 @@ library(plumber)
 # logger::log_layout(logger::layout_json(fields = c("time", "level", "pid", "msg")))
 
 # INITALISATION -----------------------------------------------------------
+message("Running with configuration: ", Sys.getenv("R_CONFIG_ACTIVE"))
+logger::log_threshold(get(config::get(value = "loglevel"),  envir = asNamespace("logger")))
 logger::log_info("sourcing classifier functions")
 source("funs.R")
 source("R/firestore.R")
