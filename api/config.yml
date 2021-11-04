@@ -2,9 +2,13 @@ default:
   loglevel: INFO
   firestore:
     collection: "match_requests"
+  storage:
+    bucket: "rappseq-data-1"
+    directory: "request-sequences"
 
 dev:
   loglevel: DEBUG
   firestore:
     collection: "test_collection"
-
+  storage:
+    bucket: "rappseq-data-test"
