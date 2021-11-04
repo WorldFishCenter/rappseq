@@ -8,6 +8,7 @@ cors <- function(res) {
 
 #* Identify pathogens in a fastq file
 #* @post /identify
+#* @param fastq:[file]
 #* @parser multi
 function(req, res){
   logger::log_info("Request received: /identify")
