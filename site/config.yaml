@@ -4,6 +4,8 @@ title: "AquaPath"
 theme: "rappseq"
 params:
   copyrightHolder: WorldFish
+  acknowledgements: AquaPath is partially funded by the CGIAR Research Programs on Fish Agri-Food Systems (FISH) led by WorldFish, the CGIAR Antimicrobial Resistance Hub on AMR related activities and from the CGIAR Platform for Big Data in Agriculture as part of the 2019 Inspire Challenge prize.
+  footer_intro: AquaPath is a joint digital initiative in collaboration with the University of Queensland and Wilderlab. 
 
 menu: 
   main:
