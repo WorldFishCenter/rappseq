@@ -2,6 +2,7 @@
 title: Streptococus agalactiae Serotype III ST283
 date: 2021-05-25T01:28:11.403Z
 description: A gram-positive bacterial coccus with high impact in aquaculture
+draft: true
 causative_agent:
   pathogen_type: bacterium
   genus: Streptococcus

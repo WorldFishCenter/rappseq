@@ -9,9 +9,9 @@ params:
 
 menu: 
   main:
-    - name: Pathogens
-      weight: 2
-      url: "/pathogens/"
+ #   - name: Pathogens
+ #     weight: 2
+ #     url: "/pathogens/"
     - name: Identification
       weight: 1
     - name: How does it work?
