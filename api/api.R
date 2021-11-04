@@ -7,8 +7,7 @@ logger::log_threshold(get(config::get(value = "loglevel"),  envir = asNamespace(
 logger::log_info("sourcing classifier functions")
 source("funs.R")
 source("R/firestore.R")
-
-firestore <- reticulate::import_from_path("firestore")
+source("R/storage.R")
 
 logger::log_info("loading classfier data")
 classifiers <- yaml::read_yaml("classifiers.yml")
