@@ -38,6 +38,12 @@ function(req, res){
         match_completed = FALSE)
     create_record(request_info, request_id)
 
+    logger::log_info(request_id, " storing requested sequence")
+    save_in_bucket(
+      path = request_values$fastq$datapath,
+      file_extension = tools::file_ext(req$body$fastq$filename),
+      data_hash = file_hash)
+
     logger::log_info(request_id, " calling matching procedures")
     matches <- match_kmers(request_values$fastq$datapath, classifiers, db_conn, file_hash)
 
