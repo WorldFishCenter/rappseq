@@ -40,10 +40,12 @@ update_record <- function(
                             collection = collection)
 }
 
-check_record <- function(
-  record_id,
-  collection = config::get(value = "firestore")$collection){
-
+find_matching_classification <- function(
+  data_hash,
+  classifier,
+  collection = config::get(value = "firestore")$collection
+  ){
   load_firestore_module()
-  firestore$check_document(document_name = record_id, collection = collection)
+  firestore$find_matching(collection, data_hash, classifier)
 }
+

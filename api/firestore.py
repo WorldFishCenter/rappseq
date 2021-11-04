@@ -41,7 +41,7 @@ def update_document(document, document_name, collection):
   doc_ref.update(document)
   return(0)
 
-def query_matching_documents(collection, data_hash):
+def find_matching(collection, data_hash, classifier):
   """Queries a firestore database for documents matching a hash
   
   Args: 
