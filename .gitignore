@@ -49,3 +49,5 @@ www/*.html
 data-sheets/*.html
 site/public/
 site/resources/
+
+api/__pycache__/
