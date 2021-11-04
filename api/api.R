@@ -1,3 +1,6 @@
+# To test the api in docker run the following commands in the console
+# docker build -t api-test . ; docker run --env PORT=1234 --env R_CONFIG_ACTIVE=dev -p 1234:1234 --name rappseq-api api-test
+
 library(plumber)
 # logger::log_layout(logger::layout_json(fields = c("time", "level", "pid", "msg")))
 
@@ -32,4 +35,4 @@ pr$registerHooks(
 logger::log_info("initialising API")
 
 pr$run(host = '0.0.0.0', port = as.numeric(Sys.getenv('PORT')))
-#pr$run(quiet = FALSE)
+# pr$run(quiet = FALSE, port = 1234)
