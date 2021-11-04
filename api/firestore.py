@@ -48,7 +48,11 @@ def query_matching_documents(collection, data_hash):
     collection: name of the collection where the document lives
     data_hash: hash to be matched
   """
-  query = db.collection(collection).where('data_hash', '==', data_hash).limit(2)
+  query = db.collection(collection).where(
+    'data_hash', '==', data_hash).where(
+      'requested_classifiers', 'array_contains', classifier).where(
+        'match_completed', '==', True).order_by(
+        'request_time', direction=firestore.Query.DESCENDING).limit(1)
   docs = query.stream()
   documents = [doc.to_dict() for doc in docs]
   return(documents)
