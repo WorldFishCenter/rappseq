@@ -332,14 +332,16 @@
                 <!--<input class="form-control" type="file" id="formFile" onchange="validate_file();validate_form()">-->
 
                 <div>
+                  <!--
                   <input id="formFile" name="file-attachment" type="file" class="js-file-attach custom-file-input" onchange="validate_file();validate_form()" 
                   data-hs-file-attach-options='{
                     "textTarget": "[for=\"formFile\"]", 
                     "maxFileSize": 102400,
                     "allowTypes": [".fastq"]
                   }'>
-             <label class="custom-file-label" for="formFile">Choose a file</label>
-             <span class="text-muted font-size-1">Browse your device and upload a .fastq file. Maximum file size 100 MB</span>
+             <label class="custom-file-label" for="formFile">Choose a file</label>-->
+             <input type="file" id="formFile" name="file-attachment" class="py-2" onchange="validate_file();validate_form()" style="width: 100%">
+             <p class="text-muted font-size-1 mb-0">Browse your device and upload a .fastq file. Maximum file size 100 MB</p>
                 </div>
                   
                 
