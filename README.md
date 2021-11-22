@@ -4,8 +4,9 @@ Lab in a Backpack is a rapid pathogen sequencing and identification workflow.
 This repository contains the code for the cloud based identification tool.
 
 ---
-**Content**
+**Contents**
 
+- [Intro](#intro)
 - [Backend](#backend)
 - [Frontend](#frontend)
 - [How-to](#how-to)
@@ -69,12 +70,25 @@ When a results request is received the API:
 - Consults the existing results in the Google firestore request database
 - Returns the data obtained from the database as a json object 
 
-### Continuous development
+### Continuous development / deployment
 
-aqua
+The API deployment workflow is defined in [.github/workflows/deploy.api](.github/workflows/deploy.api). 
+This workflow is set up to be triggered when changes to the API code or the workflow itself are made. 
 
+Github Actions then carries all the jobs defined in the workflow and automaticaly deploys an updated version of the API in Google Cloud Run. 
+The workflow: 
 
-## Front-end
+- Set ups the Google Software Development Kit.
+- Saves the Service Account Key into a file. This enables the API to connect to Google Cloud Services without requiring a password. 
+- Retrieves the kmer databases from the Google Cloud Storage Bucket
+- Build the docker image. This packages the code, the Service Account Key and the kmer databases into a single stand-alone executable file. 
+- Deploys the docker image into Google Cloud Run
+
+### Runtime
+
+Google Cloud Run. 
+
+## Frontend
 
 AquaPath front-end is built as a static website. 
 This makes it fast and very cost-effective. 
