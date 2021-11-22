@@ -10,6 +10,8 @@ AquaPath is comprised by two sub-systems.
 A web based frontend that provides inormation about the tool and serves as an user interface. 
 The backend is formed by an R based API deployed in Google Cloud Services infrastructure. 
 
+![Aquapath structure diagram](aquapath-structure.png)
+
 ## Backend
 
 The backbone of Aquapath's backend is formed by a R based API. 
