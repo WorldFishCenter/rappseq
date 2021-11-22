@@ -3,6 +3,16 @@
 Lab in a Backpack is a rapid pathogen sequencing and identification workflow. 
 This repository contains the code for the cloud based identification tool.
 
+---
+**Content**
+
+- [Backend](#backend)
+- [Frontend](#frontend)
+- [How-to](#how-to)
+---
+
+## Intro
+
 Lab in a Backpack uses GitHub Actions as a continuous development system. 
 That means that updating the code in the repository automatically trigger the update and redeployment of the services that comprise AquaPath. 
 After updating code or content the new changes will be live in a couple of minutes. 
