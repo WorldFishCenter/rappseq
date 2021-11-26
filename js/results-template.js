@@ -95,8 +95,9 @@ let bad_match_template = {"<>": "div", "class": "alert alert-soft-danger", "role
     {"<>": "p", "class": "font-weight-bold mb-0", "html": "&#x1F641; We did NOT find a good match for your sequence in our database."},
 ]}
 
-json2html.component.add('good_match', good_match_template);
-json2html.component.add('no_match', bad_match_template);
+//Remove quality alerts for now as we don't have good thresholds yet
+//json2html.component.add('good_match', good_match_template);
+//json2html.component.add('no_match', bad_match_template);
 
 let classification_template = {"<>": "div", "html": [
     {"<>": "h1", "class": "mb-4", "text": "Identification results"},

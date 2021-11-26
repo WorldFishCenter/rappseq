@@ -8,14 +8,14 @@
 <link rel=stylesheet href=https://worldfishcenter.github.io/rappseq/scss/theme.css>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HG7X0ZPCS5"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-HG7X0ZPCS5')</script>
-<title>AquaPath | How does AquaPath work?</title>
+<title>Lab in a Backpack | How does the ID tool work?</title>
 </head><body>
 <header id=header class=header>
 <div class=header-section>
 <div id=logoAndNav class=container>
 <nav class="navbar navbar-expand-lg">
-<a class=navbar-brand href=https://worldfishcenter.github.io/rappseq/ aria-label=Front>
-<h1 class=h2>AquaPath </h1>
+<a href=https://worldfishcenter.github.io/rappseq/ aria-label=Front>
+<h1 class=h2>Lab in a Backpack </h1>
 </a>
 <button type=button class="navbar-toggler btn btn-icon btn-sm rounded-circle" aria-label="Toggle navigation" aria-expanded=false aria-controls=navBar data-toggle=collapse data-target=#navBar>
 <span class=navbar-toggler-default><svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="currentcolor" d="M17.4 6.2H.6c-.3.0-.6-.3-.6-.7V4.1c0-.4.3-.7.6-.7h16.9c.3.0.6.3.6.7v1.4C18 5.9 17.7 6.2 17.4 6.2zm0 7.9H.6c-.3.0-.6-.3-.6-.7V12c0-.4.3-.7.6-.7h16.9c.3.0.6.3.6.7v1.4C18 13.7 17.7 14.1 17.4 14.1z"/></svg>
@@ -25,6 +25,19 @@
 </button>
 <div id=navBar class="collapse navbar-collapse">
 <ul class=navbar-nav>
+<li class="dropdown navbar-nav-item">
+<a id=ProtocolsMenu class="nav-link nav-link-toggle" href role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+Protocols
+</a>
+<div id=ProtocolsSubMenu class=dropdown-menu aria-labelledby=ProtocolsMenu style=min-width:230px>
+<a class="dropdown-item navbar-promo-text" href=/rappseq/sample-collection/>Sample collection
+</a>
+<a class="dropdown-item navbar-promo-text" href=/rappseq/nucleic-acid-extraction/>Nucleic acid extraction
+</a>
+<a class="dropdown-item navbar-promo-text" href=/rappseq/library-preparation/>Library preparation
+</a>
+</div>
+</li>
 <li class="dropdown navbar-nav-item">
 <a id=IdentificationMenu class="nav-link nav-link-toggle" href role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
 Identification
@@ -59,8 +72,8 @@ ID a pathogen <i class="fas fa-angle-right fa-sm ml-1"></i>
 <div class=container>
 <div class="row justify-content-center">
 <div class="col col-lg-8">
-<h1 class=mb-4>How does AquaPath work?</h1>
-<p>AquaPathRapIds is a cloud-based analytical portal designed for rapid genomic identification of aquaculture pathogens.</p>
+<h1 class=mb-4>How does the ID tool work?</h1>
+<p>Lab in a Backpack ID tool is a cloud-based system designed for rapid genomic identification of aquaculture pathogens.</p>
 <p>It is based on long read sequence data generated on Oxford Nanopore Technologies (ONT) portable sequencing platform, usually a MinION device.</p>
 <p>The portal includes several in-built classifiers for reliable identification of bacterial pathogens at species, serotype, biotype and MLST (multilocus sequence type) levels.</p>
 <p>In brief, users enter long read nanopore sequence data they generated from unknown bacterial DNA by uploading a FASTQ file (standard output text file for ONT platform. When users select the “assign” button, our inbuilt classifiers compare the sequence or sequences against our reference database that is dimensionally compressed for storage and speed, by retaining only diagnostic k20-mers (short overlapping substrings) that are unique to each taxon. It usually takes about 10-20s for every 1000 sequences uploaded for the classifiers to process and return output results to users.</p>
@@ -78,9 +91,9 @@ ID a pathogen <i class="fas fa-angle-right fa-sm ml-1"></i>
 <footer class="container space-2 text-center space-top-xl-3">
 <div class="w-md-80 w-lg-50 mx-auto">
 <a class="d-inline-flex align-items-center mb-3" href=https://worldfishcenter.github.io/rappseq/ aria-label=FishScores>
-<h2 class=h3>AquaPath</h2>
+<h2 class=h3>Lab in a Backpack</h2>
 </a>
-<div class="font-size-1 mb-1 mx-md-auto"><p>AquaPath is a joint digital initiative in collaboration with the University of Queensland and Wilderlab.</p>
+<div class="font-size-1 mb-1 mx-md-auto"><p>Lab in a Backpack is a joint digital initiative in collaboration with the University of Queensland and Wilderlab.</p>
 </div>
 <div class="d-flex justify-content-center mb-3">
 <ul class="nav nav-sm nav-x-sm align-items-center justify-content-center">
@@ -97,7 +110,7 @@ ID a pathogen <i class="fas fa-angle-right fa-sm ml-1"></i>
 <p class="muted small">Copyright (c) 2021 WorldFish All rights reserved.</p>
 </div>
 <div class=small>
-<p class=small>AquaPath is partially funded by the CGIAR Research Programs on Fish Agri-Food Systems (FISH) led by WorldFish, the CGIAR Antimicrobial Resistance Hub on AMR related activities and from the CGIAR Platform for Big Data in Agriculture as part of the 2019 Inspire Challenge prize.</p>
+<p class=small>Lab in a Backpack is partially funded by the CGIAR Research Programs on Fish Agri-Food Systems (FISH) led by WorldFish, the CGIAR Antimicrobial Resistance Hub on AMR related activities and from the CGIAR Platform for Big Data in Agriculture as part of the 2019 Inspire Challenge prize.</p>
 <p class="small text-muted">
 Online portal developed and designed by
 <a class=text-inherit href=http://cagua.co>Fernando Cagua.</a>
