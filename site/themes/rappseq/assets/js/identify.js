@@ -70,7 +70,7 @@ function fetchpost() {
 
     spinner.style.display = "inline-block"
     button.disabled = true
-    button.lastElementChild.innerText = "Matching kmers..."
+    button.lastElementChild.innerText = " Matching kmers..."
 
     // (A) GET FORM DATA
     let data = new FormData();
