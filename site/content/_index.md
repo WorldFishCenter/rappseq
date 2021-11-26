@@ -1,31 +1,31 @@
 ---
-title: AquaPath
+title: Lab in a Backpack
 hero: 
-  title: AquaPath.
+  title: Lab in a Backpack
   lead_text: Rapid and accurate diagnosis for the control and prevention of diseases in aquatic animals
   background_image: "images/lab.png"
   button_text: Learn more
-  button_link: "#features"
+  button_link: "#video"
 features:
-  header: AquaPath helps you make better decisions
+  header: Lab in a Backpack helps you make better decisions
   images: 
     - images/kid-square.png
     - images/lab-square.png
     - images/kid-square.png
   content: |
 
-    AquaPath is a cloud based tool for rapid identification of aquaculture pathogens.
+    Lab in a Backpack is a workflow for rapid identification of aquaculture pathogens.
 
     Traditional methods are slow, expensive, and do not have enough resolution to precisely know what's killing the animals in your aquaculture farm. It can be hard to know the best way forward. 
     
-    Coupled with the lab-in-a-backpack, AquaPath will help you identify aquaculture pathogens so you can make better decisions to protect your animals and your people.
+    Lab in a Backpack will help you identify aquaculture pathogens so you can make better decisions to protect your animals and your people.
   features:
     - icon: fas fa-bacteria
       url: /disease-management#identification
       content: |
         #### Know your pathogen
 
-        AquaPath can help you identify bacterial pathogens. Both at the species level and using MLST sequences. 
+        Lab in a Backpack can help you identify bacterial pathogens. Both at the species level and using MLST sequences. 
     - icon: fas fa-medkit
       url: /disease-management#treatment
       content: |
@@ -44,28 +44,8 @@ features:
         #### Human safety
 
         Detect and eliminate the risk of zoonotic and food-borne diseases before it reaches consumers.
-    # - icon: fas fa-stroopwafel
-    #   content: |
-    #     #### Cheaper and faster
-
-    #     AquaPath is faster than traditional diagnostic methods (e.g. molecular, phenotyping, serology) at a fraction of the cost.
-    # - icon:
-    #   content: |
-    #     #### Better managent and treatment
-
-    #     AquaPath's high resolution allows you to identify the most effective course of action. 
-    # - icon: 
-    #   content: |
-    #     #### Prevent future outbreaks 
-
-    #     Vaccines and 
-    # - icon: 
-    #   content: |
-    #     #### Easy to use
-
-    #     Text about how east to use and identify conmpared to other approaches
 steps:
-  heading: AquaPath's pipeline
+  heading: Lab in a Backpack's pipeline
   content: |
     ## Three simple steps to better information
 
@@ -87,11 +67,11 @@ steps:
         ### Extract and sequence pathogen DNA
       
         Send the samples to a nearby lab where a trained operator will extract the DNA from pathogens in the sample and generate nanopore sequences. 
-    - link_text: Use our online tool
+    - link_text: Use our ID tool
       icon: fas fa-laptop-medical
       url: /identify/
       content: |
-        ### Use AquaPath's identification tool
+        ### Use AquaLab in a Backpack's identification tool
 
         Answer a few questions in our cloud based tool to identify the pathogen based on the sequences. You'll get relevant clinical and epidemiological information.
 ---
