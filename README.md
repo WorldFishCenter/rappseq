@@ -92,6 +92,15 @@ Google Cloud Run uses the docker image created during the continuous development
 Google Cloud Run is a [Serverless cloud service](https://en.wikipedia.org/wiki/Serverless_computing), therefore containers are automatically scaled up and down as  the API receives requests. 
 Google Cloud Run only charges when the API is running to respond to a request.
 
+### Data
+
+Data for the application is stored in Google Storage and Google Firestore. 
+
+- Kmer databases are stored in https://console.cloud.google.com/storage/browser/rappseq-data-1/classifiers/GBS
+- Sequences uploaded as part of requests are stored in https://console.cloud.google.com/storage/browser/rappseq-data-1/request-sequences
+- Data about the requests and classification results are stored in https://console.cloud.google.com/firestore/data/match_requests?project=rappseq
+
+
 ## Frontend
 
 AquaPath front-end is built as a static website. 
@@ -154,4 +163,4 @@ The workflow:
 - **How to edit content from one of the text-based (markdown) pages?** Find the markdown file corresponding to the page you want to modify in the [site/content](site/content) directory. Edit the text in Github and commit the changes in the main branch.
 - **How to edit content from the main page?** This text is encoded in the yml frontmatter of [site/content/_index.md](site/content/_index.md). Edit the text in Github and commit the changes in the main branch.
 - **How to edit content from other pages?** The easiest might be to use GutHub search bar to find the file with the text you want to change. Edit the text in Github and commit the changes in the main branch.
-
+- **How to add a new classifier?** Add the sqlite file with the kmer database to the [Google storage bucket](https://console.cloud.google.com/storage/browser/rappseq-data-1/classifiers/GBS). Then register the classifier by editing (api/classifiers.yml) and following the pattern of existing classifiers.
