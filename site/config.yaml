@@ -13,7 +13,7 @@ menu:
  #     weight: 2
  #     url: "/pathogens/"
     - name: Identification
-      weight: 1
+      weight: 2
     - name: How does it work?
       url: /how-does-it-work/
       weight: 2
@@ -27,6 +27,20 @@ menu:
       weight: 1
     - name: Management
       url: /disease-management/
+    - name: Protocols
+      weight: 1
+    - name: Sample collection
+      url: /sample-collection/
+      weight: 1
+      parent: "Protocols"
+    - name: Nucleic acid extraction
+      url: /nucleic-acid-extraction/
+      weight: 2
+      parent: Protocols
+    - name: Library preparation
+      url: /library-preparation/
+      weight: 3
+      parent: Protocols
   footer:
     - name: Privacy policy
       url: /privacy-policy/
