@@ -43,7 +43,7 @@ This scripts loads the configurations, connects to the kmer databases for each c
 The API endpoints are defined in the [plumber.R](api/plumber.R) file.
 The Swagger documentation for the API can be accessed via [https://rappseq-api-zrvf6kau3q-de.a.run.app/__docs__/](https://rappseq-api-zrvf6kau3q-de.a.run.app/__docs__/s) 
 
-#### Identifycation endpoint
+#### Identification endpoint
 
 The `/identification` endpoint accepts POST requests and accepts the fastq files containing the sequences as well as other metadata sent with the request. 
 This endpoint return a json message with the request id once the identification is completed. 
@@ -89,8 +89,8 @@ The workflow:
 ### Runtime
 
 Google Cloud Run uses the docker image created during the continuous development workflow to create a container where the API runs. 
-Google Cloud Run is a [Serverless cloud service](https://en.wikipedia.org/wiki/Serverless_computing), therefore containers are created automatically whenever the API receives requests. 
-When no requests are received running containers are removed 
+Google Cloud Run is a [Serverless cloud service](https://en.wikipedia.org/wiki/Serverless_computing), therefore containers are automatically scaled up and down as  the API receives requests. 
+Google Cloud Run only charges when the API is running to respond to a request.
 
 ## Frontend
 
@@ -98,7 +98,9 @@ AquaPath front-end is built as a static website.
 This makes it fast and very cost-effective. 
 As a development framework we use Hugo. 
 
-All the code for the front-end can be found in the [site](site) directory.
+Two pages, one for identification and one to display the results use javascript code run on the browser to send request to the backend API and render the received response. 
+
+All the code and content for the front-end can be found in the [site](site) directory.
 
 ### Content
 
@@ -117,9 +119,39 @@ Knowledge of Hugo or go templating in general is also helpful.
 
 ### Design
 
+Lab in a Backpack is based on the Frontv3 bootstrap template. 
+As Lab in a Backpack uses hugo, changes to the design theme should be made in the HTML [layouts](site/themes/rappseq/layouts) templates.
+
 ### Identification
+
+The identification page has a form that, once completed, is submitted to the backend API using a fetch POST request to the identify endpoint. 
+The javascript code used is in [site/assets/js/identify.js](site/assets/js/identify.js)
 
 ### Results
 
+The results page submits a GET request to the API in the results endpoint as soon as the page is loaded. 
+The request is based on the browser address. 
+The response is then rendered using the [json2html](https://www.json2html.com) library. 
+
+The javascript code is in [site/assets/js/results.js](site/assets/js/results.js) and the template is defined in [site/assets/js/results-template.js](site/assets/js/results-template.js).
+
 ### Continuous development
+
+The site deployment workflow is defined in [.github/workflows/build-hugo-site.api](.github/workflows/deploy-api.yml). 
+This workflow is set up to be triggered when changes to the site code or the workflow itself are made. 
+
+Github Actions then carries all the jobs defined in the workflow and automaticaly deploys an updated version of the API in Google Cloud Run. 
+The workflow: 
+
+- Set ups Hugo.
+- Set ups node.js
+- Set ups the npm dependencies 
+- Builds the site
+- Deploys the site using GitHub pages
+
+## How-to
+
+- **How to edit content from one of the text-based (markdown) pages?** Find the markdown file corresponding to the page you want to modify in the [site/content](site/content) directory. Edit the text in Github and commit the changes in the main branch.
+- **How to edit content from the main page?** This text is encoded in the yml frontmatter of [site/content/_index.md](site/content/_index.md). Edit the text in Github and commit the changes in the main branch.
+- **How to edit content from other pages?** The easiest might be to use GutHub search bar to find the file with the text you want to change. Edit the text in Github and commit the changes in the main branch.
 
