@@ -28,7 +28,7 @@ Prevention of re-occurrence of a disease must be considered. Vaccination of farm
 
 Molecular serotyping/biotyping information is used to categorize pathogenic members from different bacterial groups. Such information is used to produce/re-formulate autogenous vaccines and is of primary importance to ensure that vaccines cover outbreak isolates in a particular region.
 
-- Our AquaPathRapIdS reference database and in-built classifiers can now accurately identify multiple serotypes of two major fish pathogens (S. agalactiae and Y. ruckeri).
+- Our Lab in a Backpack reference database and in-built classifiers can now accurately identify multiple serotypes of two major fish pathogens (S. agalactiae and Y. ruckeri).
 
 ## Are my aquatic animals safe for human consumption? {#human-safety}
 
@@ -36,4 +36,4 @@ Transmission of zoonotic and foodborne diseases between animals and humans throu
 In 2015, Streptococcus agalactiae ST-283 caused a foodborne disease outbreak involving over 100 people in Singapore (Rajendram et al., 2016).
 In xxxx, S. iniae infections were reported in humans after handling or consuming infected fish (Hansen et al., 2013).
 For example, the non-cholera vibrio: Vibrio parahaemolyticus is a frequent cause of food poisoning and septicaemia in humans (Baker-Austin et al., 2017), although mostly via marine and brackish water shellfish.
-Our AquaPathRapIdS reference database includes all the major known GBS sequence types with our classifiers trained to detect them including ST-283, allowing for early detection of those zoonose risks in aquatic food products before reaching consumers. 
+Our Lab in a Backpack's reference database includes all the major known GBS sequence types with our classifiers trained to detect them including ST-283, allowing for early detection of those zoonose risks in aquatic food products before reaching consumers. 

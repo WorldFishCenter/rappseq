@@ -1,10 +1,10 @@
 ---
-title: How does AquaPath work?
+title: How does the ID tool work?
 date: "2021-07-26"
 draft: false
 ---
 
-AquaPathRapIds is a cloud-based analytical portal designed for rapid genomic identification of aquaculture pathogens.
+Lab in a Backpack ID tool is a cloud-based system designed for rapid genomic identification of aquaculture pathogens.
 
 It is based on long read sequence data generated on Oxford Nanopore Technologies (ONT) portable sequencing platform, usually a MinION device. 
 

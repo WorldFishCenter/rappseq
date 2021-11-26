@@ -1,5 +1,5 @@
 ---
-title: AquaPath's terms of service
+title: Lab in a Backpack's terms of service
 date: "2021-07-26"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: AquaPath privacy policy
+title: Lab in a Backpack privacy policy
 date: "2021-07-29"
 draft: false
 name: privacy-policy
