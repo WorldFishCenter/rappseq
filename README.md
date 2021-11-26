@@ -56,7 +56,9 @@ When an identification request is received the API:
 - Saves the submitted sequence file in the Google cloud storage bucket 
 - Finds matches for each classifier requested
   - If the matching has already been done in this file, retrieves previous results from the Google firestore request database
-  - Otherwise, it looks matches in the corresponding kmer database for the classifier
+  - Otherwise:
+    - Extracts the kmers from the sequence file
+    - Looks for matches in the corresponding kmer database for the classifier
 - Stores the matching results in the Google firestore request database
 - Returns the request ID as a json payload
 
@@ -72,7 +74,7 @@ When a results request is received the API:
 
 ### Continuous development / deployment
 
-The API deployment workflow is defined in [.github/workflows/deploy.api](.github/workflows/deploy.api). 
+The API deployment workflow is defined in [.github/workflows/deploy.api](.github/workflows/deploy-api.yml). 
 This workflow is set up to be triggered when changes to the API code or the workflow itself are made. 
 
 Github Actions then carries all the jobs defined in the workflow and automaticaly deploys an updated version of the API in Google Cloud Run. 
@@ -86,7 +88,9 @@ The workflow:
 
 ### Runtime
 
-Google Cloud Run. 
+Google Cloud Run uses the docker image created during the continuous development workflow to create a container where the API runs. 
+Google Cloud Run is a [Serverless cloud service](https://en.wikipedia.org/wiki/Serverless_computing), therefore containers are created automatically whenever the API receives requests. 
+When no requests are received running containers are removed 
 
 ## Frontend
 
