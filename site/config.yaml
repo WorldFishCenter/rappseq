@@ -41,10 +41,7 @@ menu:
       url: /library-preparation/
       weight: 3
       parent: Protocols
-     - name: other links
-      url: /other-links/
-      weight: 4
-      parent: Protocols
+  
   footer:
     - name: Privacy policy
       url: /privacy-policy/
