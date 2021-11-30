@@ -9,4 +9,4 @@ draft: false
 
 [Fish sampling for bacteriology](https://hdl.handle.net/20.500.12348/4840)
 
-![Diagram of resource](/static/Histology-04.png)
+![Diagram of resource](/Histology-04.png)
