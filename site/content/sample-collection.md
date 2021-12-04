@@ -14,6 +14,7 @@ draft: false
 - Molecular diagnostics sampling guide [link](https://hdl.handle.net/20.500.12348/4841)
 ![icon](/Molecular-03.png) 
 ![icon](/Molecular-03_resize.png) 
+![icon](/Molecular-03_resize2.png) 
 - Microbiome sampling guide [link](https://hdl.handle.net/20.500.12348/4838)
 - Histology sampling guide [link](https://hdl.handle.net/20.500.12348/4842)
 - Blood sampling guide [link](https://hdl.handle.net/20.500.12348/4839)
