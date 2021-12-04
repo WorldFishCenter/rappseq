@@ -16,8 +16,6 @@ draft: false
 
 ![icon](/test3.png)
 
-![icon](/Molecular-03.png) 
-
 - Microbiome sampling guide [link](https://hdl.handle.net/20.500.12348/4838)
 - Histology sampling guide [link](https://hdl.handle.net/20.500.12348/4842)
 - Blood sampling guide [link](https://hdl.handle.net/20.500.12348/4839)
