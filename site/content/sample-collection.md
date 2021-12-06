@@ -12,6 +12,8 @@ draft: false
 
 ![icon](/bact_2.svg) 
 
+![icon](/bact_2_resize.svg) 
+
 - Molecular diagnostics sampling guide [link](https://hdl.handle.net/20.500.12348/4841)
 
 - Microbiome sampling guide [link](https://hdl.handle.net/20.500.12348/4838)
