@@ -30,8 +30,6 @@ draft: false
 
 ![icon](/histology.svg) 
 
-![icon](/histology2.svg) 
-
 - Blood sampling guide [link](https://hdl.handle.net/20.500.12348/4839)
 
 ![icon](/blood.svg) 
