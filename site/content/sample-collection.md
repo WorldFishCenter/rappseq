@@ -10,8 +10,6 @@ draft: false
 
 ![icon](/sampling.svg)
 
-<img src="sampling.svg" width="200">
-
 - Wet mount sampling guide (for ectoparasites & fungi) [link](https://hdl.handle.net/20.500.12348/4837)
 
 ![icon](/wetmount.svg) 
