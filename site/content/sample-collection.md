@@ -8,7 +8,7 @@ draft: false
 
 - Sampling materials for fish disease diagnostics [link](https://hdl.handle.net/20.500.12348/4836)
 
-![icon](/sampling_resize.svg) 
+![icon](/sampling.svg) 
 
 - Wet mount sampling guide (for ectoparasites & fungi) [link](https://hdl.handle.net/20.500.12348/4837)
 
@@ -16,19 +16,19 @@ draft: false
 
 - Bacteriology sampling guide [link](https://hdl.handle.net/20.500.12348/4840) 
 
-![icon](/bact2.svg) 
+![icon](/bacteriology.svg) 
 
 - Molecular diagnostics sampling guide [link](https://hdl.handle.net/20.500.12348/4841)
 
-![icon](/mol.svg) 
+![icon](/molecular.svg) 
 
 - Microbiome sampling guide [link](https://hdl.handle.net/20.500.12348/4838)
 
-![icon](/micro.svg) 
+![icon](/microbiome.svg) 
 
 - Histology sampling guide [link](https://hdl.handle.net/20.500.12348/4842)
 
-![icon](/histo.svg) 
+![icon](/histology.svg) 
 
 - Blood sampling guide [link](https://hdl.handle.net/20.500.12348/4839)
 
