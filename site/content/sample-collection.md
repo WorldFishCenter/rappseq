@@ -12,27 +12,27 @@ draft: false
 
 - Wet mount sampling guide (for ectoparasites & fungi) [link](https://hdl.handle.net/20.500.12348/4837)
 
-{{< figure src="/wetmount.svg" height="250px" >}}
+{{< figure src="/wetmount.svg" height="250px" class="text-center" >}}
 
 - Bacteriology sampling guide [link](https://hdl.handle.net/20.500.12348/4840) 
 
-{{< figure src="/bacteriology.svg" height="250px" >}}
+{{< figure src="/bacteriology.svg" height="250px" class="text-center" >}}
 
 - Molecular diagnostics sampling guide [link](https://hdl.handle.net/20.500.12348/4841)
 
-{{< figure src="/molecular.svg" height="250px" >}}
+{{< figure src="/molecular.svg" height="250px" class="text-center" >}}
 
 - Microbiome sampling guide [link](https://hdl.handle.net/20.500.12348/4838)
 
-{{< figure src="/microbiome.svg" height="250px" >}}
+{{< figure src="/microbiome.svg" height="250px" class="text-center" >}}
 
 - Histology sampling guide [link](https://hdl.handle.net/20.500.12348/4842)
 
-{{< figure src="/histology.svg" height="250px" >}}
+{{< figure src="/histology.svg" height="250px" class="text-center" >}}
 
 - Blood sampling guide [link](https://hdl.handle.net/20.500.12348/4839)
 
-{{< figure src="/blood.svg" height="250px" >}}
+{{< figure src="/blood.svg" height="250px" class="text-center" >}}
 
 
 
