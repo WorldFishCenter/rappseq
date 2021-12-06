@@ -10,9 +10,7 @@ draft: false
 - Wet mount sampling guide (for ectoparasites & fungi) [link](https://hdl.handle.net/20.500.12348/4837)
 - Bacteriology sampling guide [link](https://hdl.handle.net/20.500.12348/4840) 
 
-![icon](/Icon_Manuscript-09.png) 
-
-![icon](/bact_2_resize.svg) 
+![icon](/bact_2.svg) 
 
 - Molecular diagnostics sampling guide [link](https://hdl.handle.net/20.500.12348/4841)
 
