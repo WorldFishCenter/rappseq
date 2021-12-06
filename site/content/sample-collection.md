@@ -10,7 +10,7 @@ draft: false
 
 {{< figure src="/sampling.svg" height="250px">}}
 
-{{< youtube w7Ft2ymGmfc >}}
+{{< youtube id="w7Ft2ymGmfc" title="test" autoplay="true" >}}
 
 - Wet mount sampling guide (for ectoparasites & fungi) [link](https://hdl.handle.net/20.500.12348/4837)
 
