@@ -14,8 +14,6 @@ draft: false
 
 ![icon](/wetmount.svg) 
 
-![icon](/wetmount2.svg) 
-
 - Bacteriology sampling guide [link](https://hdl.handle.net/20.500.12348/4840) 
 
 ![icon](/bacteriology.svg) 
