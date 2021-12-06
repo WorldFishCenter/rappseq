@@ -28,7 +28,7 @@ draft: false
 
 - Histology sampling guide [click here](https://hdl.handle.net/20.500.12348/4842)
 
-{{< figure src="/histology.svg" height="150px" class="text-center" >}}
+{{< figure src="/histology2.svg" height="150px" class="text-center" >}}
 
 - Blood sampling guide [click here](https://hdl.handle.net/20.500.12348/4839)
 
