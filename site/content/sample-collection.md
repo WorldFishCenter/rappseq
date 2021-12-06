@@ -7,18 +7,32 @@ draft: false
 ### Quick fish sampling guides for disease diagnostics
 
 - Sampling materials for fish disease diagnostics [link](https://hdl.handle.net/20.500.12348/4836)
+
+![icon](/sampling.svg) 
+
 - Wet mount sampling guide (for ectoparasites & fungi) [link](https://hdl.handle.net/20.500.12348/4837)
+
+![icon](/wetmount.svg) 
+
 - Bacteriology sampling guide [link](https://hdl.handle.net/20.500.12348/4840) 
 
-![icon](/bact3.svg) 
-
-![icon](/bact_2_resize.svg) 
+![icon](/bact2.svg) 
 
 - Molecular diagnostics sampling guide [link](https://hdl.handle.net/20.500.12348/4841)
 
+![icon](/mol.svg) 
+
 - Microbiome sampling guide [link](https://hdl.handle.net/20.500.12348/4838)
+
+![icon](/micro.svg) 
+
 - Histology sampling guide [link](https://hdl.handle.net/20.500.12348/4842)
+
+![icon](/histo.svg) 
+
 - Blood sampling guide [link](https://hdl.handle.net/20.500.12348/4839)
+
+![icon](/blood.svg) 
 
 
 
