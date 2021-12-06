@@ -12,7 +12,7 @@ draft: false
 
 - Wet mount sampling guide (for ectoparasites & fungi) [click here](https://hdl.handle.net/20.500.12348/4837)
 
-{{< figure src="/wetmount.svg" height="150px" class="text-center" >}}
+{{< figure src="/wetmount2.svg" height="150px" class="text-center" >}}
 
 - Bacteriology sampling guide [click here](https://hdl.handle.net/20.500.12348/4840) 
 
