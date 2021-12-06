@@ -6,7 +6,7 @@ draft: false
 
 ### Quick fish sampling guides for disease diagnostics
 
-- Sampling materials for fish disease diagnostics [click here](https://hdl.handle.net/20.500.12348/4836)
+- Sampling materials for fish disease diagnostics [click here](https://digitalarchive.worldfishcenter.org/bitstream/handle/20.500.12348/4836/6c300dac0c2fe3f5b6833d4b93388a6c.pdf?sequence=2&isAllowed=y)
 
 {{< figure src="/sampling.svg" height="150px" class="text-center" >}}
 
