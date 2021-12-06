@@ -16,7 +16,7 @@ draft: false
 
 - Bacteriology sampling guide [click here](https://hdl.handle.net/20.500.12348/4840) 
 
-{{< figure src="/bacteriology.svg" height="220px" class="text-center" >}}
+{{< figure src="/bacteriology.svg" height="180px" class="text-center" >}}
 
 - Molecular diagnostics sampling guide [click here](https://hdl.handle.net/20.500.12348/4841)
 
@@ -28,11 +28,11 @@ draft: false
 
 - Histology sampling guide [click here](https://hdl.handle.net/20.500.12348/4842)
 
-{{< figure src="/histology2.svg" height="250px" class="text-center" >}}
+{{< figure src="/histology2.svg" height="180px" class="text-center" >}}
 
 - Blood sampling guide [click here](https://hdl.handle.net/20.500.12348/4839)
 
-{{< figure src="/blood.svg" height="80px" class="text-center" >}}
+{{< figure src="/blood.svg" height="120px" class="text-center" >}}
 
 
 
