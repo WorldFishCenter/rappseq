@@ -8,9 +8,9 @@ draft: false
 
 - Sampling materials for fish disease diagnostics [link](https://hdl.handle.net/20.500.12348/4836)
 
-![icon](/sampling.svg) { width=50% height=50% }
+![icon](/sampling.svg)
 
-<img src="/sampling.svg" width="200">
+<img src="sampling.svg" width="200">
 
 - Wet mount sampling guide (for ectoparasites & fungi) [link](https://hdl.handle.net/20.500.12348/4837)
 
