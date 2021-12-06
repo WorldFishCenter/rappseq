@@ -12,6 +12,12 @@ draft: false
 
 ![icon](/Icon_Manuscript-09.png) 
 
+![icon](/Bact_300web.png)
+
+![icon](/Bact_full.png)
+
+![icon](/Bact.svg)
+
 - Molecular diagnostics sampling guide [link](https://hdl.handle.net/20.500.12348/4841)
 
 ![icon](/test3.png)
