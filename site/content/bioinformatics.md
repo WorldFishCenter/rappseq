@@ -58,8 +58,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-A9. Pre-Data analysis QC Check
-A10. Whole genome sequencing bioinformatics pipeline
-A11. Targeted amplicon (including 16S rRNA) bioinformatic pipeline
-A12. Walkthrough of all web-based tools and resources
+Pre-Data analysis QC Check
+Whole genome sequencing bioinformatics pipeline
+Targeted amplicon (including 16S rRNA) bioinformatic pipeline
+Walkthrough of all web-based tools and resources
 
