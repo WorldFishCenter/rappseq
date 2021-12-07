@@ -19,7 +19,7 @@ There are over 67 antibiotics used in 11 aquaculture producing countries. Overus
 
 Watch this short video explaining why AMR in aquaculture matters for the One Helath approach
 
-{{< youtube 1MlhG0FgeAI&list=PL_5s5CPGqCKRK2vgP8gPcwQKcnnOo_2vK >}}
+{{< youtube 1MlhG0FgeAI >}}
 
 Safe antibiotic use based on data-driven decisions under health professional supervision will be key to reduce their overall use in aquaculture.
 
