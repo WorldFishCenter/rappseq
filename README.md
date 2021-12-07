@@ -161,7 +161,20 @@ The workflow:
 ## How-to
 
 - **How to edit content from one of the text-based (markdown) pages?** Find the markdown file corresponding to the page you want to modify in the [site/content](site/content) directory. Edit the text in Github and commit the changes in the main branch.
+
 - **How to edit content from the main page?** This text is encoded in the yml frontmatter of [site/content/_index.md](site/content/_index.md). Edit the text in Github and commit the changes in the main branch.
+
 - **How to edit content from other pages?** The easiest might be to use the GitHub search bar to find the file with the text you want to change. Edit the text in Github and commit the changes in the main branch.
+
 - **How to add a new classifier?** Add the SQLite file with the kmer database to the [Google storage bucket](https://console.cloud.google.com/storage/browser/rappseq-data-1/classifiers/GBS). Then register the classifier by editing (api/classifiers.yml) and following the pattern of existing classifiers.
 
+- **How to add a new page?** First create a md file in the [site/content](site/content) directory. The name of the file will be used by hugo to construct the URL, so make sure it has no spaces, capital letters or symbols appart from dashes and underscores. For example `library-preparation.md`. Make sure the file has a yaml header with at least the title of the page and the date (see below). If you also want to add a link to the page from the main menu edit [rappseq/site/config.yaml](rappseq/site/config.yaml). See existing menu entries there as an example. If the menu entry has a parent it goes as a submenu and the weight field determines the order of the link. 
+
+```
+---
+title: Library preparation
+date: "2021-07-29"
+---
+
+Content of the page goes here...
+```
