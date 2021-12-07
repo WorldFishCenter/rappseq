@@ -10,7 +10,7 @@ This section covers pre-data analysis QC checks of raw Illumina and nanopore  se
 **Contents**
 
 - [Intro](#intro)
-- [Pre-Data analysis QC Check](#Pre-Data analysis QC Check)
+- [Pre-Data analysis QC Check](#Pre-Data_analysis_QC_Check)
 - [WGS_pipeline](#WGS_pipeline)
 - [Targeted_amplicon](#amplicon_pipeline)
 - [web-based tools](#web-based_tools)
