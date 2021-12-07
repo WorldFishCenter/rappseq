@@ -36,7 +36,7 @@ Prevention of re-occurrence of a disease must be considered. Vaccination of farm
 Molecular serotyping/biotyping information is used to categorize pathogenic members from different bacterial groups. Such information is used to produce/re-formulate autogenous vaccines and is of primary importance to ensure that vaccines cover outbreak isolates in a particular region.
 
 
-{{< figure src="/vaccine.svg" height="170px" class="text-center" >}}
+{{< figure src="/vaccine.svg" height="140px" class="text-center" >}}
 
 ---
    > **Read more about** the benefits of autogenous vaccination in Aquaculture [Open Access link](https://onlinelibrary.wiley.com/doi/10.1111/raq.12633)
