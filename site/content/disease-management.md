@@ -13,11 +13,11 @@ Identify a bacterial pathogen at the genus and species levels. Fine epidemiology
 
 ## How can I treat my aquatic animals? {#treatment}
 
-When there is a disease outbreak, treatment of the current situation.
+To minimize disease outbreaks, potential preventative measures include the use of probiotics, vaccination, better management practices, monitoring of the environment, and improved biosecurity. 
 
-Potential preventative measures include probiotics, vaccination, management of the environment, and improved biosecurity. Treatment with antibiotics can be used to treat fish diseases caused by bacteria. With ready access to antibiotics coupled to limited availability of veterinary support, aquatic disease control with antibiotics is poorly informed, often unrecorded and likely to be high in many countries where aquaculture growth is fastest. 
+Treatment with antibiotics can be used to treat fish diseases caused by bacteria **only**. With ready access to antibiotics coupled to limited availability of veterinary support and diagnostic tools, aquatic disease control with antibiotics is poorly informed, often unrecorded and likely to be high in many countries where aquaculture growth is fastest. 
 
-There are over 67 antibiotics used in 11 aquaculture producing countries. Overuse and misuse of antibiotics present an increasing risk of developing antibiotic resistant bacteria, a phenomenon also known as antimicrobial resistance (AMR). AMR has been declared as one of the most serious threats to global public health with attention now focused on global food supply. 
+There are over **67 antibiotics** used in **11 aquaculture producing countries**. Overuse and misuse of antibiotics present an increasing risk of developing antibiotic resistant bacteria, a phenomenon also known as **antimicrobial resistance (AMR)**. AMR has been declared as one of the most serious threats to global public health with attention now focused on global food supply. 
 
    > **Watch this short video** explaining why AMR in aquaculture matters for the One Health approach
 
