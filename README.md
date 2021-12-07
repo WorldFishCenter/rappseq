@@ -172,11 +172,3 @@ The workflow:
 
 - **How to add a new page?** First create a md file in the [site/content](site/content) directory (use the "Add new" button if using the GitHub intreface). The name of the file will be used by hugo to construct the URL, so make sure it has no spaces, capital letters or symbols appart from dashes and underscores. For example `library-preparation.md`. Make sure the file has a yaml header with at least the title of the page and the date (see below). If you also want to add a link to the page from the main menu edit [rappseq/site/config.yaml](rappseq/site/config.yaml). See existing menu entries there as an example. If the menu entry has a parent it goes as a submenu and the weight field determines the order of the link. 
 
-```
----
-title: Library preparation
-date: "2021-07-29"
----
-
-Content of the page goes here...
-```
