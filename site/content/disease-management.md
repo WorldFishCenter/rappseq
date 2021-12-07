@@ -17,6 +17,10 @@ Potential preventative measures include probiotics, vaccination, management of t
 
 There are over 67 antibiotics used in 11 aquaculture producing countries. Overuse and misuse of antibiotics present an increasing risk of developing antibiotic resistant bacteria, a phenomenon also known as antimicrobial resistance (AMR). AMR has been declared as one of the most serious threats to global public health with attention now focused on global food supply. 
 
+Watch this short video explaining why AMR in aquaculture matters for the One Helath approach
+
+{{< youtube 1MlhG0FgeAI&list=PL_5s5CPGqCKRK2vgP8gPcwQKcnnOo_2vK >}}
+
 Safe antibiotic use based on data-driven decisions under health professional supervision will be key to reduce their overall use in aquaculture.
 
 - Can raw nanopore reads be used to correctly infer AMR phenotype of streptococcal fish pathogens (*Streptococcus iniae* and *S. agalactiae*) from an in-house database? Work in progress (coming in 2022).
