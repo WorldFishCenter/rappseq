@@ -6,7 +6,3 @@ draft: false
 
 coming soon...
 
-
-{{< blockquote >}}
-  This is a simple quote.
-{{< /blockquote >}}
