@@ -41,6 +41,10 @@ menu:
       url: /library-preparation/
       weight: 3
       parent: Protocols
+    - name: Bioinformatics
+      url: /bioinformatics/
+      weight: 4
+      parent: Protocols
   
   footer:
     - name: Privacy policy
