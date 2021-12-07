@@ -1,6 +1,6 @@
 ---
 title: Using pathogen genomic data to manage a disease outbreak
-date: "2021-11-30"
+date: "2021-12-07"
 ---
 
 Based on our reference database and trained classifiers, users who generate new nanopore sequences from unknown bacterial DNA can derive clinically and epidemiologically relevant information to answer the three main questions that aquaculture producers have during a disease outbreak.
@@ -50,10 +50,11 @@ Molecular serotyping/biotyping information is used to categorize pathogenic memb
 {{< figure src="/safefood.svg" height="200px" class="text-center" >}}
 
 
+
 Transmission of zoonotic and foodborne diseases between animals and humans through consumption or during handling and preparation of infected aquatic animals pose serious concerns for public health and food safety.
 
 The non-cholera vibrio: *Vibrio parahaemolyticus* is a frequent cause of food poisoning and septicaemia in humans, although mostly via marine and brackish water shellfish.
 
 *S. iniae* infections were reported in humans after handling or consuming infected fish. In 2015, *S. agalactiae* sequence type ST-283 was reported to cause foodborne disease outbreak in human through consumption of raw freshwater fish.
 
-Currently our Lab in a Backpack's reference database includes all the major known GBS sequence types with our classifiers trained to detect them including ST-283, allowing for early detection of those zoonose risks in aquatic food products before reaching consumers. 
+Currently our Lab in a Backpack's reference database includes all the major known GBS sequence types (STs) and serotypes with our classifiers trained to detect them including ST-283, allowing for early detection of those zoonose risks in aquatic food products before reaching consumers. 
