@@ -46,6 +46,8 @@ Molecular serotyping/biotyping information is used to categorize pathogenic memb
 
 ## Are my aquatic animals safe for human consumption? {#human-safety}
 
+{{< figure src="/safefood.svg" height="170px" class="text-center" >}}
+
 Transmission of zoonotic and foodborne diseases between animals and humans through consumption or during handling and preparation of infected aquatic animals pose serious concerns for public health and food safety.
 
 The non-cholera vibrio: *Vibrio parahaemolyticus* is a frequent cause of food poisoning and septicaemia in humans, although mostly via marine and brackish water shellfish.
