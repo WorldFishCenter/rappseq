@@ -168,6 +168,8 @@ The workflow:
 
 - **How to add a new classifier?** Add the SQLite file with the kmer database to the [Google storage bucket](https://console.cloud.google.com/storage/browser/rappseq-data-1/classifiers/GBS). Then register the classifier by editing (api/classifiers.yml) and following the pattern of existing classifiers.
 
+- **How to edit the menu entries?** The menus are defined in the [rappseq/site/config.yaml](rappseq/site/config.yaml) file. At a minimum a menu entry has a name (the visible heading). It can also have an url linking to a specific page in the site (use a relative link like `/identify/` instead of an absolute link like `https://labinabackpack.com/identify/` unless you're linking to an external page). A menu entry can also have more parameters to specify order, nesting, and others. For more info about menus check the [menu entry in the hugo documentation](https://gohugo.io/content-management/menus/)
+
 - **How to add a new page?** First create a md file in the [site/content](site/content) directory (use the "Add new" button if using the GitHub intreface). The name of the file will be used by hugo to construct the URL, so make sure it has no spaces, capital letters or symbols appart from dashes and underscores. For example `library-preparation.md`. Make sure the file has a yaml header with at least the title of the page and the date (see below). If you also want to add a link to the page from the main menu edit [rappseq/site/config.yaml](rappseq/site/config.yaml). See existing menu entries there as an example. If the menu entry has a parent it goes as a submenu and the weight field determines the order of the link. 
 
 ```
