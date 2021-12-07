@@ -24,7 +24,7 @@ Watch this short video explaining why AMR in aquaculture matters for the One Hea
 
 Safe antibiotic use based on data-driven decisions under health professional supervision will be key to reduce their overall use in aquaculture.
 
-- Can raw nanopore reads be used to correctly infer AMR phenotype of streptococcal fish pathogens (*Streptococcus iniae* and *S. agalactiae*) from an in-house database? Work in progress (coming in 2022).
+- Can raw nanopore reads be used to correctly infer AMR phenotype of streptococcal fish pathogens (*Streptococcus iniae* and *S. agalactiae*) from an in-house database? Work in progress (**coming in 2022**).
 
 ## How can I prevent disease in the next crops? {#prevent}
 
@@ -37,7 +37,9 @@ Molecular serotyping/biotyping information is used to categorize pathogenic memb
 ## Are my aquatic animals safe for human consumption? {#human-safety}
 
 Transmission of zoonotic and foodborne diseases between animals and humans through consumption or during handling and preparation of infected aquatic animals pose serious concerns for public health and food safety.
-In 2015, *S. agalactiae* ST-283 caused a foodborne disease outbreak involving over 100 people in Singapore (Rajendram et al., 2016).
-In xxxx, S. iniae infections were reported in humans after handling or consuming infected fish (Hansen et al., 2013).
-For example, the non-cholera vibrio: *Vibrio parahaemolyticus* is a frequent cause of food poisoning and septicaemia in humans (Baker-Austin et al., 2017), although mostly via marine and brackish water shellfish.
-Our Lab in a Backpack's reference database includes all the major known GBS sequence types with our classifiers trained to detect them including ST-283, allowing for early detection of those zoonose risks in aquatic food products before reaching consumers. 
+
+The non-cholera vibrio: *Vibrio parahaemolyticus* is a frequent cause of food poisoning and septicaemia in humans, although mostly via marine and brackish water shellfish.
+
+*S. iniae* infections were reported in humans after handling or consuming infected fish. In 2015, *S. agalactiae* sequence type ST-283 was reported to cause foodborne disease outbreak in human through consumption of raw freshwater fish.
+
+Currently our Lab in a Backpack's reference database includes all the major known GBS sequence types with our classifiers trained to detect them including ST-283, allowing for early detection of those zoonose risks in aquatic food products before reaching consumers. 
