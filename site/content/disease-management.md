@@ -7,6 +7,8 @@ Based on our reference database and trained classifiers, users who generate new 
 
 ## What is killing my aquatic animals? {#identification}
 
+{{< figure src="/pathogens.svg" height="170px" class="text-center" >}}
+
 Identify a bacterial pathogen at the genus and species levels. Fine epidemiology using multi-locus sequence type (MLST) data to determine the origin, track spread and evolution of bacterial disease outbreaks 
 
 ## How can I treat my aquatic animals? {#treatment}
@@ -31,6 +33,9 @@ Safe antibiotic use based on data-driven decisions under health professional sup
 Prevention of re-occurrence of a disease must be considered. Vaccination of farmed fish with locally produced autogenous vaccines against bacterial disease can provide a locally-driven, cost-effective means to protect those animals, reduce antibiotic use and therefore address the global antibiotic resistance problem. 
 
 Molecular serotyping/biotyping information is used to categorize pathogenic members from different bacterial groups. Such information is used to produce/re-formulate autogenous vaccines and is of primary importance to ensure that vaccines cover outbreak isolates in a particular region.
+
+
+{{< figure src="/vaccine.svg" height="170px" class="text-center" >}}
 
 ---
    > **Read more about** the benefits of autogenous vaccination in Aquaculture [Open Access link](https://onlinelibrary.wiley.com/doi/10.1111/raq.12633)
