@@ -8,6 +8,8 @@ Based on our reference database and trained classifiers, users who generate new 
 ## What is killing my aquatic animals? {#identification}
 
 {{< figure src="/pathogens.svg" height="170px" class="text-center" >}}
+{{< imgcap title="disease diagnostic" src="/pathogens.svg" >}}
+
 
 Identify a bacterial pathogen at the genus and species levels. Fine epidemiology using multi-locus sequence type (MLST) data to determine the origin, track spread and evolution of bacterial disease outbreaks 
 
