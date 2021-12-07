@@ -9,8 +9,8 @@ This section covers pre-data analysis QC checks of raw Illumina and nanopore  se
 ---
 **Contents**
 
-- [intro](#intro)
-- [pre-Data analysis QC Check](#Pre-analysis)
+- [Intro](#intro)
+- [Pre-Data analysis QC Check](#Pre-analysis)
 - [Whole genome sequencing bioinformatics pipeline](#WGS_pipeline)
 - [Targeted amplicon (including 16S rRNA) bioinformatic pipeline](#amplicon_pipeline)
 - [Walkthrough of all web-based tools and resources](#web-based_tools)
@@ -42,7 +42,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-## amplicon_pipeline 
+## Amplicon_pipeline 
 
 Coming soon...
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -57,9 +57,4 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-Pre-Data analysis QC Check
-Whole genome sequencing bioinformatics pipeline
-Targeted amplicon (including 16S rRNA) bioinformatic pipeline
-Walkthrough of all web-based tools and resources
 
