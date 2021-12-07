@@ -46,7 +46,8 @@ Molecular serotyping/biotyping information is used to categorize pathogenic memb
 
 ## Are my aquatic animals safe for human consumption? {#human-safety}
 
-{{< figure src="/safefood.svg" height="170px" class="text-center" >}}
+{{< figure src="/safefood.svg" height="200px" class="text-center" >}}
+
 
 Transmission of zoonotic and foodborne diseases between animals and humans through consumption or during handling and preparation of infected aquatic animals pose serious concerns for public health and food safety.
 
