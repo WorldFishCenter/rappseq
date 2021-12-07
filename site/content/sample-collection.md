@@ -18,7 +18,7 @@ draft: false
 
 {{< figure src="/bacteriology.svg" height="170px" class="text-center" >}}
 
-- Molecular diagnostics sampling guide [click here](https://digitalarchive.worldfishcenter.org/bitstream/handle/20.500.12348/4841/5c4d42f39b8fb4736bf42f5812faab7a.pdf?sequence=2&isAllowed=y)
+- Molecular diagnostics sampling guide [click here](https://hdl.handle.net/20.500.12348/4841)
 
 {{< figure src="/molecular.svg" height="150px" class="text-center" >}}
 
